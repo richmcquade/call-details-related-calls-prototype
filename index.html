@@ -1787,9 +1787,9 @@ html&gt;body{padding:0}&lt;/style&gt;
 })();
 &lt;/script&gt;
 &lt;div id=&quot;single-call-candidates&quot; aria-label=&quot;Call Details with related call candidates&quot;&gt;
- &lt;header class=&quot;appbar&quot;&gt;&lt;span&gt;&lt;i data-lucide=&quot;radio&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Calls for Service&lt;/span&gt;&lt;small&gt;PROTOTYPE · SAMPLE DATA&lt;/small&gt;&lt;/header&gt;
- &lt;div class=&quot;call-header&quot;&gt;&lt;div class=&quot;breadcrumb&quot;&gt;Calls for Service / Call Details / 917&lt;/div&gt;&lt;div class=&quot;headline&quot;&gt;&lt;h1&gt;Call 917 &lt;span&gt;Disturbance&lt;/span&gt;&lt;/h1&gt;&lt;span class=&quot;current-label&quot;&gt;Current call&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;call-meta&quot;&gt;&lt;span&gt;&lt;i data-lucide=&quot;map-pin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 212 Oakhurst Ln&lt;/span&gt;&lt;span&gt;Received 22:14 · Jul 14&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
- &lt;div class=&quot;workspace&quot;&gt;
+ &lt;header class=&quot;cad-window-title&quot;&gt;&lt;h1&gt;&lt;i data-lucide=&quot;radio&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; CFS #917 - Detail&lt;/h1&gt;&lt;span&gt;PROTOTYPE · SAMPLE DATA&lt;/span&gt;&lt;/header&gt;
+ &lt;nav class=&quot;cad-tabs&quot; aria-label=&quot;Call Details tabs&quot;&gt;&lt;div class=&quot;cad-tab-row&quot;&gt;&lt;span&gt;1.Narrative&lt;/span&gt;&lt;span&gt;2.Vehicles&lt;/span&gt;&lt;span&gt;3.People&lt;/span&gt;&lt;span&gt;4.NCIC&lt;/span&gt;&lt;span&gt;5.E911&lt;/span&gt;&lt;span&gt;6.Incidents&lt;/span&gt;&lt;span&gt;7.SRI&lt;/span&gt;&lt;span&gt;8.Logs&lt;/span&gt;&lt;span&gt;9.Alerts&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cad-tab-row&quot;&gt;&lt;span class=&quot;cad-active-tab&quot; aria-current=&quot;page&quot;&gt;0.Associated Calls&lt;/span&gt;&lt;span&gt;Dispositions&lt;/span&gt;&lt;span&gt;Personnel&lt;/span&gt;&lt;span&gt;Questionnaire&lt;/span&gt;&lt;span&gt;GIS&lt;/span&gt;&lt;span&gt;Linked Calls&lt;/span&gt;&lt;span&gt;Text&lt;/span&gt;&lt;span&gt;Alarm&lt;/span&gt;&lt;span&gt;Attachments&lt;/span&gt;&lt;/div&gt;&lt;/nav&gt;
+ &lt;div class=&quot;workspace&quot; aria-label=&quot;Associated Calls&quot;&gt;
   &lt;section class=&quot;relationship-row suggested-row&quot; aria-labelledby=&quot;sc-suggested-heading&quot;&gt;&lt;h2 id=&quot;sc-suggested-heading&quot;&gt;Suggested&lt;/h2&gt;&lt;div id=&quot;sc-suggested-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Suggested pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-suggestions&quot; class=&quot;row-empty&quot; hidden&gt;No suggested pairs.&lt;/p&gt;&lt;/section&gt;
   &lt;section class=&quot;comparison&quot; id=&quot;sc-comparison&quot; aria-label=&quot;Selected call pair comparison&quot;&gt;
    &lt;div class=&quot;comparison-title&quot;&gt;&lt;div&gt;&lt;div class=&quot;eyebrow&quot;&gt;SELECTED PAIR&lt;/div&gt;&lt;h2 id=&quot;sc-pair-title&quot;&gt;Comparing Call 917 with Call 919&lt;/h2&gt;&lt;/div&gt;&lt;span id=&quot;sc-pair-score&quot; class=&quot;score&quot;&gt;0.92&lt;/span&gt;&lt;/div&gt;
@@ -1857,6 +1857,26 @@ html&gt;body{padding:0}&lt;/style&gt;
  #single-call-candidates .no-share-option strong{display:block;font-weight:600;margin-bottom:4px;}
  #single-call-candidates #sc-no-share-description{display:block;color:var(--sc-muted);}
  #single-call-candidates #sc-link-dialog section{width:min(470px,100%);}
+ #single-call-candidates{border-radius:0;border:1px solid light-dark(#79a5cc,#526781);padding:4px;background:var(--sc-surface);}
+ #single-call-candidates .cad-window-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 8px;margin-bottom:7px;background:light-dark(#e1edf8,#26374b);border-bottom:1px solid light-dark(#7fa4c7,#526781);}
+ #single-call-candidates .cad-window-title h1{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;margin:0;color:var(--sc-text);}
+ #single-call-candidates .cad-window-title&gt;span{font-size:10px;letter-spacing:.5px;color:var(--sc-muted);margin-right:85px;}
+ #single-call-candidates .cad-tabs{border:1px solid light-dark(#888,#333);margin:0 3px;background:light-dark(#f9f9f9,#161c25);}
+ #single-call-candidates .cad-tab-row{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));}
+ #single-call-candidates .cad-tab-row&gt;span{display:flex;align-items:center;justify-content:center;text-align:center;padding:2px 4px;min-height:24px;font-size:12px;line-height:1.2;background:linear-gradient(light-dark(#f3f3f3,#2c3542),light-dark(#cdcdcd,#1b222c));border-right:1px solid light-dark(#888,#333);border-bottom:1px solid light-dark(#888,#333);color:light-dark(#000,#e8edf5);overflow-wrap:anywhere;}
+ #single-call-candidates .cad-tab-row&gt;span:last-child{border-right:0;}
+ #single-call-candidates .cad-tab-row:first-child&gt;span{font-weight:600;}
+ #single-call-candidates .cad-tab-row&gt;span.cad-active-tab{position:relative;background:light-dark(#f9f9f9,#161c25);border-bottom-color:transparent;border-radius:4px 4px 0 0;margin-top:-2px;padding-top:4px;font-weight:600;}
+ #single-call-candidates .workspace{margin:0 3px 3px;border:1px solid light-dark(#888,#333);border-top:0;}
+ #single-call-candidates .relationship-row{padding:11px 10px;}
+ #single-call-candidates .comparison{padding-left:10px;padding-right:10px;}
+ #single-call-candidates .comparison-title .eyebrow{display:none;}
+ #single-call-candidates .comparison-title h2{font-size:14px;}
+ #single-call-candidates .pair-summary{margin:9px 0 13px;}
+ #single-call-candidates .why-related{padding:13px 0;}
+ #single-call-candidates .resolved-row{margin-top:0;padding-bottom:14px;}
+ @media(max-width:750px){#single-call-candidates .cad-tab-row{grid-template-columns:repeat(5,minmax(0,1fr));}#single-call-candidates .cad-window-title&gt;span{display:none;}}
+ @media(max-width:450px){#single-call-candidates .cad-tab-row{grid-template-columns:repeat(3,minmax(0,1fr));}}
 &lt;/style&gt;
 &lt;script&gt;
 (()=&gt;{
