@@ -16,7 +16,7 @@
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'&quot;&gt;
 &lt;title&gt;Call Details Related Calls Prototype&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
@@ -137,7 +137,7 @@
   --radius-2xl: calc(var(--radius) * 2);
   --radius-full: 9999px;
   --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
-  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E&quot;);
 
   /* Legacy aliases; not part of the current agent contract. */
   --viz-bg: transparent;
@@ -737,7 +737,7 @@ a.btn {
   left: 50%;
   display: flex;
   width: max-content;
-  /* Leave room for the host&#x27;s design-controls launcher at the trailing edge. */
+  /* Leave room for the host's design-controls launcher at the trailing edge. */
   max-width: calc(100% - 96px);
   align-items: center;
   gap: 0;
@@ -1335,7 +1335,7 @@ textarea.form-control {
 
 /* Web recipes are the default, including on renderers without inline style queries. */
 @supports (border-radius: if(style(--corner-shape: round): 1px; else: 2px)) {
-  /* Match the host&#x27;s proportional text-sm scale at every text preference. */
+  /* Match the host's proportional text-sm scale at every text preference. */
   .tooltip,
   .viz-badge,
   .btn,
@@ -1496,7 +1496,26 @@ svg.lucide {
   color: var(--destructive);
 }
 
-html&gt;body{padding:0}&lt;/style&gt;
+html&gt;body{padding:0}
+ #single-call-candidates #sc-merge-dialog section{width:min(560px,100%);padding:20px;}
+ #single-call-candidates #sc-merge-dialog .merge-direction{display:block;background:var(--sc-bg);border:1px solid var(--sc-line);border-radius:6px;padding:14px;margin-top:13px;}
+ #single-call-candidates .merge-direction h4{color:var(--sc-muted);font-size:12px;margin-bottom:10px;}
+ #single-call-candidates .merge-call-pair{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:center;gap:12px;}
+ #single-call-candidates .merge-call{display:flex;flex-wrap:wrap;gap:7px 10px;align-content:center;border:1px solid var(--sc-line);border-radius:5px;padding:11px;min-height:91px;min-width:0;}
+ #single-call-candidates .merge-call strong{font-size:14px;width:100%;}
+ #single-call-candidates .merge-units{font-size:11px;color:var(--sc-muted);overflow-wrap:anywhere;width:100%;}
+ #single-call-candidates .merge-disposition{font-size:11px;font-weight:600;}
+ #single-call-candidates .merge-call[data-disposition=keep]{background:var(--sc-green-bg);border-color:var(--sc-green);}
+ #single-call-candidates .merge-call[data-disposition=keep] .merge-disposition{color:var(--sc-green);}
+ #single-call-candidates .merge-call[data-disposition=cancel]{background:light-dark(#fff6e6,#443620);border-color:light-dark(#d69a25,#d7aa55);}
+ #single-call-candidates .merge-call[data-disposition=cancel] .merge-disposition{color:light-dark(#995b00,#ffd18b);}
+ #single-call-candidates button.merge-arrow{width:34px;height:34px;border-radius:50%;padding:0;font-size:21px;background:var(--sc-surface);color:var(--sc-text);}
+ #single-call-candidates #sc-merge-description{font-size:13px;color:var(--sc-muted);line-height:1.6;margin:13px 0 18px;}
+ #single-call-candidates #sc-merge-dialog .merge-footer{display:flex;justify-content:flex-end;gap:8px;}
+ #single-call-candidates #sc-merge-dialog{padding:12px;}
+ @media(max-width:420px){#single-call-candidates #sc-merge-dialog section{padding:14px;}#single-call-candidates #sc-merge-dialog .merge-direction{padding:9px;}#single-call-candidates .merge-call-pair{gap:6px;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);}#single-call-candidates button.merge-arrow{width:30px;height:34px;}#single-call-candidates .merge-call{padding:8px;}}
+
+&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
@@ -1800,18 +1819,18 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;article class=&quot;call-card&quot; aria-label=&quot;Candidate call&quot;&gt;&lt;span class=&quot;candidate-tag&quot;&gt;Candidate&lt;/span&gt;&lt;div class=&quot;inline-call-summary&quot;&gt;&lt;h3 id=&quot;sc-candidate-title&quot;&gt;Call 919&lt;/h3&gt;&lt;span id=&quot;sc-candidate-type&quot;&gt;Assault&lt;/span&gt;&lt;span id=&quot;sc-candidate-location&quot; aria-label=&quot;Location&quot;&gt;212 Oakhurst Ln&lt;/span&gt;&lt;span id=&quot;sc-candidate-time&quot; aria-label=&quot;Received&quot;&gt;22:19 · Jul 14&lt;/span&gt;&lt;/div&gt;&lt;h4&gt;Narrative&lt;/h4&gt;&lt;div class=&quot;narrative&quot; id=&quot;sc-candidate-narrative&quot;&gt;&lt;p&gt;&lt;time&gt;22:19&lt;/time&gt; Caller reports being punched after a &lt;mark&gt;loud argument&lt;/mark&gt; in the parking lot.&lt;/p&gt;&lt;p&gt;&lt;time&gt;22:20&lt;/time&gt; Describes the other man as wearing a &lt;mark&gt;gray hoodie&lt;/mark&gt;, beside a &lt;mark&gt;blue Ford pickup&lt;/mark&gt;.&lt;/p&gt;&lt;p&gt;&lt;time&gt;22:21&lt;/time&gt; Suspect left on foot heading north. Caller requests an officer.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;
    &lt;/div&gt;
    &lt;div class=&quot;why-related&quot;&gt;&lt;h4&gt;Why these calls may be related&lt;/h4&gt;&lt;ul id=&quot;sc-evidence&quot;&gt;&lt;li&gt;Same parking lot and closely spaced reports&lt;/li&gt;&lt;li&gt;Argument may have escalated to an assault&lt;/li&gt;&lt;li&gt;Matching gray hoodie and blue Ford pickup&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-   &lt;div class=&quot;actions&quot;&gt;&lt;span id=&quot;sc-action-context&quot;&gt;Apply to Call 917 ↔ Call 919&lt;/span&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;dismiss&quot;&gt;Dismiss&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;merge&quot;&gt;Merge into 917&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;link&quot;&gt;Link calls&lt;/button&gt;&lt;/div&gt;&lt;span id=&quot;sc-resolved-label&quot; hidden&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; data-action=&quot;undo&quot; hidden&gt;Undo&lt;/button&gt;&lt;/div&gt;
+   &lt;div class=&quot;actions&quot;&gt;&lt;span id=&quot;sc-action-context&quot;&gt;Apply to Call 917 ↔ Call 919&lt;/span&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;dismiss&quot;&gt;Dismiss&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;merge&quot;&gt;Merge calls&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;link&quot;&gt;Link calls&lt;/button&gt;&lt;/div&gt;&lt;span id=&quot;sc-resolved-label&quot; hidden&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; data-action=&quot;undo&quot; hidden&gt;Undo&lt;/button&gt;&lt;/div&gt;
    &lt;button type=&quot;button&quot; class=&quot;narrative-toggle cursor-interaction&quot; data-action=&quot;narrative&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;sc-narrative-panel&quot;&gt;Show narrative comparison&lt;/button&gt;
    &lt;section id=&quot;sc-narrative-panel&quot; class=&quot;narrative-panel&quot; aria-label=&quot;Narrative comparison&quot; hidden&gt;&lt;div&gt;&lt;h4&gt;Call 917 narrative&lt;/h4&gt;&lt;div id=&quot;sc-current-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h4 id=&quot;sc-narrative-heading&quot;&gt;Call 919 narrative&lt;/h4&gt;&lt;div id=&quot;sc-other-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
    &lt;p class=&quot;ai-note&quot;&gt;&lt;i data-lucide=&quot;info&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; AI can make mistakes. Verify details before taking action.&lt;/p&gt;
   &lt;/section&gt;
   &lt;section class=&quot;relationship-row resolved-row&quot; aria-labelledby=&quot;sc-resolved-heading&quot;&gt;&lt;h2 id=&quot;sc-resolved-heading&quot;&gt;Resolved&lt;/h2&gt;&lt;div id=&quot;sc-resolved-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Resolved pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-resolved&quot; class=&quot;row-empty&quot;&gt;No resolved pairs.&lt;/p&gt;&lt;/section&gt;
  &lt;/div&gt;
- &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-merge-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-merge-title&quot;&gt;&lt;h3 id=&quot;sc-merge-title&quot;&gt;Merge into Call 917?&lt;/h3&gt;&lt;p id=&quot;sc-merge-description&quot;&gt;&lt;/p&gt;&lt;p class=&quot;muted&quot;&gt;Simulated action. No live calls are changed.&lt;/p&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-merge&quot;&gt;Merge into Call 917&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+ &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-merge-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-merge-title&quot; aria-describedby=&quot;sc-merge-description&quot;&gt;&lt;h3 id=&quot;sc-merge-title&quot;&gt;Confirm merge&lt;/h3&gt;&lt;div class=&quot;merge-direction&quot;&gt;&lt;h4&gt;Merge direction&lt;/h4&gt;&lt;div class=&quot;merge-call-pair&quot;&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-left&quot;&gt;&lt;strong&gt;Call 917&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;2 units · 1B4, 1B3&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;merge-arrow cursor-interaction&quot; data-action=&quot;flip-merge&quot; aria-label=&quot;Reverse merge direction&quot; data-tooltip=&quot;Reverse merge direction&quot;&gt;→&lt;/button&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-right&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;No units listed&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;sc-merge-description&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;div class=&quot;merge-footer&quot;&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-merge&quot;&gt;Merge&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
  &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-link-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-link-title&quot; aria-describedby=&quot;sc-link-description&quot;&gt;&lt;h3 id=&quot;sc-link-title&quot;&gt;Link Call 917 and Call 919?&lt;/h3&gt;&lt;p id=&quot;sc-link-description&quot;&gt;New narrative added to either call will be shared with the other call.&lt;/p&gt;&lt;label class=&quot;no-share-option cursor-interaction&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sc-no-share&quot; aria-describedby=&quot;sc-no-share-description&quot;&gt;&lt;span&gt;&lt;strong&gt;Do not share new narrative&lt;/strong&gt;&lt;span id=&quot;sc-no-share-description&quot;&gt;The calls will be linked, but new narrative will remain with the call where it was entered.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel-link&quot;&gt;No, Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-link&quot;&gt;Yes, Link Calls&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;style&gt;
- #single-call-candidates{--sc-bg:light-dark(#f6f8fb,#121b29);--sc-surface:light-dark(#fff,#1b2739);--sc-text:light-dark(#19263c,#ebf0f8);--sc-muted:light-dark(#5c6b80,#b6c2d5);--sc-line:light-dark(#dce2ed,#3c4a60);--sc-blue:light-dark(#315dc3,#94b5ff);--sc-blue-bg:light-dark(#edf3ff,#263a59);--sc-green:light-dark(#06775c,#8ce0c1);--sc-green-bg:light-dark(#e4f4ec,#203e37);--sc-mark:light-dark(#ece2ff,#4d3b68);background:var(--sc-bg);color:var(--sc-text);font:14px/1.5 &#x27;Segoe UI&#x27;,Arial,sans-serif;border:1px solid var(--sc-line);border-radius:8px;overflow:hidden;position:relative;}
+ #single-call-candidates{--sc-bg:light-dark(#f6f8fb,#121b29);--sc-surface:light-dark(#fff,#1b2739);--sc-text:light-dark(#19263c,#ebf0f8);--sc-muted:light-dark(#5c6b80,#b6c2d5);--sc-line:light-dark(#dce2ed,#3c4a60);--sc-blue:light-dark(#315dc3,#94b5ff);--sc-blue-bg:light-dark(#edf3ff,#263a59);--sc-green:light-dark(#06775c,#8ce0c1);--sc-green-bg:light-dark(#e4f4ec,#203e37);--sc-mark:light-dark(#ece2ff,#4d3b68);background:var(--sc-bg);color:var(--sc-text);font:14px/1.5 'Segoe UI',Arial,sans-serif;border:1px solid var(--sc-line);border-radius:8px;overflow:hidden;position:relative;}
  #single-call-candidates *{box-sizing:border-box;}#single-call-candidates [hidden]{display:none!important;}#single-call-candidates svg,#single-call-candidates i{width:15px;height:15px;flex-shrink:0;}#single-call-candidates .appbar{background:light-dark(#101a2e,#0c1423);color:#f4f7ff;padding:16px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center;}#single-call-candidates .appbar&gt;span{display:flex;align-items:center;gap:9px;font-weight:600;}#single-call-candidates .appbar small{font-size:11px;letter-spacing:.7px;margin-right:75px;color:#c1cce0;}
  #single-call-candidates .call-header{padding:20px 24px 22px;background:var(--sc-surface);border-bottom:1px solid var(--sc-line);}#single-call-candidates .breadcrumb{font-size:11px;color:var(--sc-muted);margin-bottom:15px;}#single-call-candidates .headline{display:flex;align-items:center;gap:15px;flex-wrap:wrap;}#single-call-candidates h1{font-size:24px;line-height:1.3;margin:0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-weight:600;}#single-call-candidates h1&gt;span{font-size:16px;color:var(--sc-muted);font-weight:400;}#single-call-candidates .current-label{font-size:11px;background:var(--sc-blue-bg);color:var(--sc-blue);border-radius:4px;padding:2px 7px;white-space:nowrap;}#single-call-candidates .call-meta{display:flex;flex-wrap:wrap;gap:10px 25px;margin-top:12px;color:var(--sc-muted);font-size:12px;}#single-call-candidates .call-meta&gt;span{display:flex;gap:5px;align-items:center;}
  #single-call-candidates .workspace{display:grid;grid-template-columns:270px minmax(0,1fr);}#single-call-candidates aside{padding:20px 14px;background:var(--sc-surface);border-right:1px solid var(--sc-line);}#single-call-candidates .sidebar-heading{padding:0 5px;}#single-call-candidates h2{font-size:17px;margin:0;font-weight:600;}#single-call-candidates .sidebar-heading h2{font-size:15px;}#single-call-candidates .sidebar-heading p{font-size:12px;color:var(--sc-muted);margin:5px 0 16px;}#single-call-candidates button{font:inherit;border:1px solid var(--sc-line);background:var(--sc-surface);color:var(--sc-text);padding:8px 11px;border-radius:5px;}#single-call-candidates button:hover{background:var(--sc-blue-bg);}#single-call-candidates button.primary{color:light-dark(#fff,#122340);background:var(--sc-blue);border-color:var(--sc-blue);}#single-call-candidates button:focus-visible{outline:2px solid var(--sc-blue);outline-offset:3px;}#single-call-candidates .queue-tabs{display:flex;border-bottom:1px solid var(--sc-line);gap:10px;margin:0 4px 15px;}#single-call-candidates .queue-tabs button{border:0;background:transparent;border-radius:0;font-size:12px;flex:1;padding:8px 0;}#single-call-candidates .queue-tabs button[aria-pressed=true]{color:var(--sc-blue);box-shadow:0 2px 0 var(--sc-blue);}#single-call-candidates .queue-tabs span{display:inline-block;padding:0 6px;border-radius:10px;background:var(--sc-bg);margin-left:3px;}
@@ -1880,38 +1899,47 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/style&gt;
 &lt;script&gt;
 (()=&gt;{
- const root=document.getElementById(&#x27;single-call-candidates&#x27;),q=s=&gt;root.querySelector(s),qa=s=&gt;root.querySelectorAll(s);
+ const root=document.getElementById('single-call-candidates'),q=s=&gt;root.querySelector(s),qa=s=&gt;root.querySelectorAll(s);
  const data={
-  919:{type:&#x27;Assault&#x27;,location:&#x27;212 Oakhurst Ln&#x27;,time:&#x27;22:19&#x27;,caller:&#x27;Roy Talbert&#x27;,score:&#x27;0.92&#x27;,recommend:&#x27;Link&#x27;,distance:&#x27;Same location · 5 minutes later&#x27;,narrative:[[&#x27;22:19&#x27;,&#x27;Caller reports being punched after a &lt;mark&gt;loud argument&lt;/mark&gt; in the parking lot.&#x27;],[&#x27;22:20&#x27;,&#x27;Describes the other man as wearing a &lt;mark&gt;gray hoodie&lt;/mark&gt;, beside a &lt;mark&gt;blue Ford pickup&lt;/mark&gt;.&#x27;],[&#x27;22:21&#x27;,&#x27;Suspect left on foot heading north. Caller requests an officer.&#x27;]],evidence:[&#x27;Same parking lot and closely spaced reports&#x27;,&#x27;Argument may have escalated to an assault&#x27;,&#x27;Matching gray hoodie and blue Ford pickup&#x27;]},
-  925:{type:&#x27;Suspicious&#x27;,location:&#x27;218 Oakhurst Ln&#x27;,time:&#x27;22:26&#x27;,caller:&#x27;Marcus Webb&#x27;,score:&#x27;0.76&#x27;,recommend:&#x27;Review&#x27;,distance:&#x27;Nearby address · 12 minutes later&#x27;,narrative:[[&#x27;22:26&#x27;,&#x27;Caller reports a man in a &lt;mark&gt;gray hoodie&lt;/mark&gt; pacing near a driveway.&#x27;],[&#x27;22:27&#x27;,&#x27;Man was seen &lt;mark&gt;walking north on Oakhurst Ln&lt;/mark&gt; from the direction of the parking lot.&#x27;],[&#x27;22:28&#x27;,&#x27;Caller heard shouting earlier but did not witness an argument or assault.&#x27;]],evidence:[&#x27;Nearby address, reported 12 minutes after Call 917&#x27;,&#x27;Gray hoodie and northbound direction match&#x27;,&#x27;No vehicle or assault confirmed in this call&#x27;]}
+  919:{type:'Assault',location:'212 Oakhurst Ln',time:'22:19',caller:'Roy Talbert',score:'0.92',recommend:'Link',distance:'Same location · 5 minutes later',narrative:[['22:19','Caller reports being punched after a &lt;mark&gt;loud argument&lt;/mark&gt; in the parking lot.'],['22:20','Describes the other man as wearing a &lt;mark&gt;gray hoodie&lt;/mark&gt;, beside a &lt;mark&gt;blue Ford pickup&lt;/mark&gt;.'],['22:21','Suspect left on foot heading north. Caller requests an officer.']],evidence:['Same parking lot and closely spaced reports','Argument may have escalated to an assault','Matching gray hoodie and blue Ford pickup']},
+  925:{type:'Suspicious',location:'218 Oakhurst Ln',time:'22:26',caller:'Marcus Webb',score:'0.76',recommend:'Review',distance:'Nearby address · 12 minutes later',narrative:[['22:26','Caller reports a man in a &lt;mark&gt;gray hoodie&lt;/mark&gt; pacing near a driveway.'],['22:27','Man was seen &lt;mark&gt;walking north on Oakhurst Ln&lt;/mark&gt; from the direction of the parking lot.'],['22:28','Caller heard shouting earlier but did not witness an argument or assault.']],evidence:['Nearby address, reported 12 minutes after Call 917','Gray hoodie and northbound direction match','No vehicle or assault confirmed in this call']}
  };
- data[925].recommend=&#x27;Link&#x27;;
- const state={selected:&#x27;919&#x27;,expanded:false,results:{919:&#x27;pending&#x27;,925:&#x27;pending&#x27;},shareNarrative:{919:true,925:true}};const design={highlights:true};
- const currentNarrative=q(&#x27;.call-card .narrative&#x27;);q(&#x27;#sc-current-narrative&#x27;).append(...Array.from(currentNarrative.childNodes));currentNarrative.previousElementSibling.remove();currentNarrative.remove();
- const oldNarrative=q(&#x27;#sc-candidate-narrative&#x27;);oldNarrative.previousElementSibling.remove();oldNarrative.remove();
- q(&#x27;.call-columns&#x27;).insertBefore(q(&#x27;.actions&#x27;),q(&#x27;.call-card:last-child&#x27;));
- function restore(ws){const m=ws?.modelContent;if(m?.version!==3)return;if(data[m.selectedCandidate])state.selected=String(m.selectedCandidate);for(const id of Object.keys(data)){const r=m.relationships?.[id];state.results[id]=[&#x27;pending&#x27;,&#x27;linked&#x27;,&#x27;dismissed&#x27;,&#x27;merged&#x27;].includes(r)?r:&#x27;pending&#x27;;state.shareNarrative[id]=m.shareNarrative?.[id]!==false;}state.expanded=ws.privateContent?.expanded===true;}
+ data[925].recommend='Link';
+ const state={selected:'919',expanded:false,mergeKeep:{},results:{919:'pending',925:'pending'},shareNarrative:{919:true,925:true}};const design={highlights:true};
+ const currentNarrative=q('.call-card .narrative');q('#sc-current-narrative').append(...Array.from(currentNarrative.childNodes));currentNarrative.previousElementSibling.remove();currentNarrative.remove();
+ const oldNarrative=q('#sc-candidate-narrative');oldNarrative.previousElementSibling.remove();oldNarrative.remove();
+ q('.call-columns').insertBefore(q('.actions'),q('.call-card:last-child'));
+ function restore(ws){const m=ws?.modelContent;if(m?.version!==3)return;if(data[m.selectedCandidate])state.selected=String(m.selectedCandidate);for(const id of Object.keys(data)){const r=m.relationships?.[id];state.results[id]=['pending','linked','dismissed','merged'].includes(r)?r:'pending';state.shareNarrative[id]=m.shareNarrative?.[id]!==false;state.mergeKeep[id]=[id,'917'].includes(String(m.mergeKeep?.[id]))?String(m.mergeKeep[id]):'917';}state.expanded=ws.privateContent?.expanded===true;}
  restore(window.openai?.widgetState);
- function persist(){window.openai?.setWidgetState({modelContent:{version:3,currentCall:917,selectedCandidate:Number(state.selected),relationships:{...state.results},shareNarrative:{...state.shareNarrative}},privateContent:{expanded:state.expanded}})?.catch(()=&gt;{});}
- function render(){const id=state.selected,d=data[id],r=state.results[id];root.dataset.highlights=design.highlights?&#x27;on&#x27;:&#x27;off&#x27;;
-  q(&#x27;#sc-suggested-buttons&#x27;).replaceChildren();q(&#x27;#sc-resolved-buttons&#x27;).replaceChildren();
-  for(const candidate of Object.keys(data)){const result=state.results[candidate],pending=result===&#x27;pending&#x27;,action=pending?data[candidate].recommend:{linked:&#x27;Linked&#x27;,merged:&#x27;Merged&#x27;,dismissed:&#x27;Dismissed&#x27;}[result];const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;pair-button cursor-interaction&#x27;;b.dataset.candidate=candidate;b.setAttribute(&#x27;aria-pressed&#x27;,String(candidate===id));b.setAttribute(&#x27;aria-controls&#x27;,&#x27;sc-comparison&#x27;);b.setAttribute(&#x27;aria-label&#x27;,`Call ${candidate}, ${action}`);const number=document.createElement(&#x27;span&#x27;),label=document.createElement(&#x27;span&#x27;);number.textContent=`Call ${candidate}`;label.textContent=action;label.className=&#x27;button-action&#x27;;b.append(number,label);q(pending?&#x27;#sc-suggested-buttons&#x27;:&#x27;#sc-resolved-buttons&#x27;).append(b);}
-  const pending=Object.values(state.results).filter(r=&gt;r===&#x27;pending&#x27;).length;q(&#x27;#sc-no-suggestions&#x27;).hidden=pending&gt;0;q(&#x27;#sc-no-resolved&#x27;).hidden=pending&lt;2;
-  q(&#x27;#sc-pair-title&#x27;).textContent=`Comparing Call 917 with Call ${id}`;q(&#x27;#sc-pair-score&#x27;).textContent=d.score;q(&#x27;#sc-pair-score&#x27;).classList.toggle(&#x27;medium&#x27;,id===&#x27;925&#x27;);q(&#x27;#sc-recommend&#x27;).textContent=`AI recommended: ${d.recommend}`;q(&#x27;#sc-distance&#x27;).textContent=d.distance;
-  q(&#x27;#sc-candidate-title&#x27;).textContent=`Call ${id}`;q(&#x27;#sc-candidate-type&#x27;).textContent=d.type;q(&#x27;#sc-candidate-location&#x27;).textContent=d.location;q(&#x27;#sc-candidate-time&#x27;).textContent=`${d.time} · Jul 14`;q(&#x27;#sc-other-narrative&#x27;).innerHTML=d.narrative.map(([t,n])=&gt;`&lt;p&gt;&lt;time&gt;${t}&lt;/time&gt;${n}&lt;/p&gt;`).join(&#x27;&#x27;);q(&#x27;#sc-narrative-heading&#x27;).textContent=`Call ${id} narrative`;q(&#x27;#sc-evidence&#x27;).replaceChildren(...d.evidence.map(t=&gt;{const li=document.createElement(&#x27;li&#x27;);li.textContent=t;return li;}));q(&#x27;#sc-action-context&#x27;).textContent=`Call 917 ↔ Call ${id}`;
-  q(&#x27;#sc-narrative-panel&#x27;).hidden=!state.expanded;q(&#x27;[data-action=narrative]&#x27;).setAttribute(&#x27;aria-expanded&#x27;,String(state.expanded));q(&#x27;[data-action=narrative]&#x27;).textContent=state.expanded?&#x27;Hide narrative comparison&#x27;:&#x27;Show narrative comparison&#x27;;q(&#x27;[data-action=link]&#x27;).classList.toggle(&#x27;recommended&#x27;,d.recommend===&#x27;Link&#x27;);q(&#x27;[data-action=merge]&#x27;).classList.toggle(&#x27;recommended&#x27;,d.recommend===&#x27;Merge&#x27;);
-  q(&#x27;.actions&gt;div&#x27;).hidden=r!==&#x27;pending&#x27;;q(&#x27;#sc-resolved-label&#x27;).hidden=r===&#x27;pending&#x27;;q(&#x27;[data-action=undo]&#x27;).hidden=r===&#x27;pending&#x27;;q(&#x27;#sc-resolved-label&#x27;).textContent={linked:&#x27;Calls linked&#x27;,dismissed:&#x27;Relationship dismissed&#x27;,merged:`Call ${id} merged into 917`}[r]||&#x27;&#x27;;q(&#x27;#sc-feedback&#x27;).hidden=r===&#x27;pending&#x27;;q(&#x27;#sc-feedback&gt;span&#x27;).textContent={linked:`Call ${id} is linked to Call 917. ${state.shareNarrative[id]?&#x27;New narrative will be shared between the calls.&#x27;:&#x27;New narrative will not be shared between the calls.&#x27;}`,dismissed:`Call ${id} dismissed for Call 917.`,merged:`Call ${id} merged into Call 917. Call 917 remains primary.`}[r]||&#x27;&#x27;;
+ function persist(){window.openai?.setWidgetState({modelContent:{version:3,currentCall:917,selectedCandidate:Number(state.selected),relationships:{...state.results},shareNarrative:{...state.shareNarrative},mergeKeep:{...state.mergeKeep}},privateContent:{expanded:state.expanded}})?.catch(()=&gt;{});}
+ function render(){const id=state.selected,d=data[id],r=state.results[id];root.dataset.highlights=design.highlights?'on':'off';
+  q('#sc-suggested-buttons').replaceChildren();q('#sc-resolved-buttons').replaceChildren();
+  for(const candidate of Object.keys(data)){const result=state.results[candidate],pending=result==='pending',action=pending?data[candidate].recommend:{linked:'Linked',merged:'Merged',dismissed:'Dismissed'}[result];const b=document.createElement('button');b.type='button';b.className='pair-button cursor-interaction';b.dataset.candidate=candidate;b.setAttribute('aria-pressed',String(candidate===id));b.setAttribute('aria-controls','sc-comparison');b.setAttribute('aria-label',`Call ${candidate}, ${action}`);const number=document.createElement('span'),label=document.createElement('span');number.textContent=`Call ${candidate}`;label.textContent=action;label.className='button-action';b.append(number,label);q(pending?'#sc-suggested-buttons':'#sc-resolved-buttons').append(b);}
+  const pending=Object.values(state.results).filter(r=&gt;r==='pending').length;q('#sc-no-suggestions').hidden=pending&gt;0;q('#sc-no-resolved').hidden=pending&lt;2;
+  q('#sc-pair-title').textContent=`Comparing Call 917 with Call ${id}`;q('#sc-pair-score').textContent=d.score;q('#sc-pair-score').classList.toggle('medium',id==='925');q('#sc-recommend').textContent=`AI recommended: ${d.recommend}`;q('#sc-distance').textContent=d.distance;
+  q('#sc-candidate-title').textContent=`Call ${id}`;q('#sc-candidate-type').textContent=d.type;q('#sc-candidate-location').textContent=d.location;q('#sc-candidate-time').textContent=`${d.time} · Jul 14`;q('#sc-other-narrative').innerHTML=d.narrative.map(([t,n])=&gt;`&lt;p&gt;&lt;time&gt;${t}&lt;/time&gt;${n}&lt;/p&gt;`).join('');q('#sc-narrative-heading').textContent=`Call ${id} narrative`;q('#sc-evidence').replaceChildren(...d.evidence.map(t=&gt;{const li=document.createElement('li');li.textContent=t;return li;}));q('#sc-action-context').textContent=`Call 917 ↔ Call ${id}`;
+  q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide narrative comparison':'Show narrative comparison';q('[data-action=link]').classList.toggle('recommended',d.recommend==='Link');q('[data-action=merge]').classList.toggle('recommended',d.recommend==='Merge');
+  q('.actions&gt;div').hidden=r!=='pending';q('#sc-resolved-label').hidden=r==='pending';q('[data-action=undo]').hidden=r==='pending';q('#sc-resolved-label').textContent={linked:'Calls linked',dismissed:'Relationship dismissed',merged:`Call ${mergeOutcome(id).cancel} merged into ${mergeOutcome(id).keep}`}[r]||'';q('#sc-feedback').hidden=r==='pending';q('#sc-feedback&gt;span').textContent={linked:`Call ${id} is linked to Call 917. ${state.shareNarrative[id]?'New narrative will be shared between the calls.':'New narrative will not be shared between the calls.'}`,dismissed:`Call ${id} dismissed for Call 917.`,merged:`Call ${mergeOutcome(id).cancel} canceled and merged with Call ${mergeOutcome(id).keep}. Call ${mergeOutcome(id).keep} kept.`}[r]||'';
  }
- function close(){q(&#x27;#sc-merge-dialog&#x27;).hidden=true;q(&#x27;[data-action=merge]&#x27;).focus();}
- function closeLink(){q(&#x27;#sc-link-dialog&#x27;).hidden=true;q(&#x27;[data-action=link]&#x27;).focus();}
- root.addEventListener(&#x27;click&#x27;,e=&gt;{const b=e.target.closest(&#x27;button&#x27;);if(!b)return;if(b.dataset.candidate){state.selected=b.dataset.candidate;}
-  const action=b.dataset.action;if(action===&#x27;merge&#x27;){q(&#x27;#sc-merge-title&#x27;).textContent=`Merge Call ${state.selected} into Call 917?`;q(&#x27;#sc-merge-description&#x27;).textContent=`Call 917 remains the primary call. Call ${state.selected} will be recorded as merged into it.`;q(&#x27;#sc-merge-dialog&#x27;).hidden=false;q(&#x27;[data-action=cancel]&#x27;).focus();return;}if(action===&#x27;cancel&#x27;){close();return;}
-  if(action===&#x27;link&#x27;){q(&#x27;#sc-link-title&#x27;).textContent=`Link Call 917 and Call ${state.selected}?`;q(&#x27;#sc-no-share&#x27;).checked=false;q(&#x27;#sc-link-dialog&#x27;).hidden=false;q(&#x27;#sc-no-share&#x27;).focus();return;}if(action===&#x27;cancel-link&#x27;){closeLink();return;}if(action===&#x27;confirm-link&#x27;){state.shareNarrative[state.selected]=!q(&#x27;#sc-no-share&#x27;).checked;closeLink();state.results[state.selected]=&#x27;linked&#x27;;}
-  if(action===&#x27;confirm-merge&#x27;){close();state.results[state.selected]=&#x27;merged&#x27;;}if(action===&#x27;dismiss&#x27;){state.results[state.selected]=&#x27;dismissed&#x27;;}if(action===&#x27;undo&#x27;){state.results[state.selected]=&#x27;pending&#x27;;state.shareNarrative[state.selected]=true;}if(action===&#x27;narrative&#x27;)state.expanded=!state.expanded;render();persist();if([&#x27;confirm-link&#x27;,&#x27;dismiss&#x27;,&#x27;confirm-merge&#x27;].includes(action))q(&#x27;[data-action=undo]&#x27;).focus();else if(b.dataset.candidate)q(`[data-candidate=&quot;${state.selected}&quot;]`).focus();
+
+ let draftMergeKeep='917';
+ function mergeOutcome(id){const keep=state.mergeKeep[id]||'917';return {keep,cancel:keep==='917'?id:'917'};}
+ function renderMerge(){const id=state.selected,leftKeep=draftMergeKeep==='917';q('#sc-merge-right strong').textContent='Call '+id;
+  for(const [selector,keep] of [['#sc-merge-left',leftKeep],['#sc-merge-right',!leftKeep]]){const card=q(selector);card.dataset.disposition=keep?'keep':'cancel';card.querySelector('.merge-disposition').textContent=keep?'KEEP':'CANCEL';}
+  const keep=leftKeep?'917':id,cancel=leftKeep?id:'917';q('[data-action=flip-merge]').textContent=leftKeep?'←':'→';q('[data-action=flip-merge]').setAttribute('aria-label',leftKeep?'Reverse direction: keep Call '+id+', cancel Call 917':'Reverse direction: keep Call 917, cancel Call '+id);
+  q('#sc-merge-description').textContent='Call '+cancel+' will be canceled and merged with Call '+keep+'. Call '+keep+' will be kept. Do you wish to continue?';
+ }
+
+ function close(){q('#sc-merge-dialog').hidden=true;q('[data-action=merge]').focus();}
+ function closeLink(){q('#sc-link-dialog').hidden=true;q('[data-action=link]').focus();}
+ root.addEventListener('click',e=&gt;{const b=e.target.closest('button');if(!b)return;if(b.dataset.candidate){state.selected=b.dataset.candidate;}
+  const action=b.dataset.action;if(action==='merge'){draftMergeKeep=state.selected;renderMerge();q('#sc-merge-dialog').hidden=false;q('[data-action=cancel]').focus();return;}if(action==='flip-merge'){draftMergeKeep=draftMergeKeep==='917'?state.selected:'917';renderMerge();return;}if(action==='cancel'){close();return;}
+  if(action==='link'){q('#sc-link-title').textContent=`Link Call 917 and Call ${state.selected}?`;q('#sc-no-share').checked=false;q('#sc-link-dialog').hidden=false;q('#sc-no-share').focus();return;}if(action==='cancel-link'){closeLink();return;}if(action==='confirm-link'){state.shareNarrative[state.selected]=!q('#sc-no-share').checked;closeLink();state.results[state.selected]='linked';}
+  if(action==='confirm-merge'){state.mergeKeep[state.selected]=draftMergeKeep;close();state.results[state.selected]='merged';}if(action==='dismiss'){state.results[state.selected]='dismissed';}if(action==='undo'){state.results[state.selected]='pending';state.shareNarrative[state.selected]=true;}if(action==='narrative')state.expanded=!state.expanded;render();persist();if(['confirm-link','dismiss','confirm-merge'].includes(action))q('[data-action=undo]').focus();else if(b.dataset.candidate)q(`[data-candidate=&quot;${state.selected}&quot;]`).focus();
  });
- root.addEventListener(&#x27;keydown&#x27;,e=&gt;{const linking=!q(&#x27;#sc-link-dialog&#x27;).hidden;if(!linking&amp;&amp;q(&#x27;#sc-merge-dialog&#x27;).hidden)return;if(e.key===&#x27;Escape&#x27;){e.preventDefault();linking?closeLink():close();}if(e.key===&#x27;Tab&#x27;){const a=linking?q(&#x27;#sc-no-share&#x27;):q(&#x27;[data-action=cancel]&#x27;),b=q(linking?&#x27;[data-action=confirm-link]&#x27;:&#x27;[data-action=confirm-merge]&#x27;);if(e.shiftKey&amp;&amp;document.activeElement===a){e.preventDefault();b.focus();}else if(!e.shiftKey&amp;&amp;document.activeElement===b){e.preventDefault();a.focus();}}});
- window.addEventListener(&#x27;openai:set_globals&#x27;,e=&gt;{if(e.detail?.globals?.widgetState){restore(e.detail.globals.widgetState);render();}});
- render();if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:render});tweak.addToggle(design,&#x27;highlights&#x27;,{label:&#x27;Highlight shared narrative details&#x27;});}
+ root.addEventListener('keydown',e=&gt;{const linking=!q('#sc-link-dialog').hidden;if(!linking&amp;&amp;q('#sc-merge-dialog').hidden)return;if(e.key==='Escape'){e.preventDefault();linking?closeLink():close();}if(e.key==='Tab'){const dialog=q(linking?'#sc-link-dialog':'#sc-merge-dialog'),focusable=Array.from(dialog.querySelectorAll('button:not([disabled]),input:not([disabled])')),a=focusable[0],b=focusable[focusable.length-1];if(e.shiftKey&amp;&amp;document.activeElement===a){e.preventDefault();b.focus();}else if(!e.shiftKey&amp;&amp;document.activeElement===b){e.preventDefault();a.focus();}}});
+ window.addEventListener('openai:set_globals',e=&gt;{if(e.detail?.globals?.widgetState){restore(e.detail.globals.widgetState);render();}});
+ render();if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:render});tweak.addToggle(design,'highlights',{label:'Highlight shared narrative details'});}
 })();
 &lt;/script&gt;
 
@@ -2223,11 +2251,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/script&gt;
 &lt;script id=&quot;codex-visualization-tabs&quot;&gt;
 (() =&gt; {
-  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
-  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selector = '.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]';
+  const disabled = ':disabled,[aria-disabled=&quot;true&quot;]';
   const selectTab = (selected) =&gt; {
     const panelId = selected.getAttribute(&quot;aria-controls&quot;);
-    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+    for (const tab of selected.closest('[role=&quot;tablist&quot;]').querySelectorAll('[role=&quot;tab&quot;]')) {
       const active = tab === selected;
       tab.classList.toggle(&quot;active&quot;, active);
       tab.setAttribute(&quot;aria-selected&quot;, String(active));
@@ -2251,7 +2279,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       return;
     }
     const tabs = Array.from(
-      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+      tab.closest('[role=&quot;tablist&quot;]').querySelectorAll('[role=&quot;tab&quot;]'),
     ).filter((candidate) =&gt; !candidate.matches(disabled));
     const current = tabs.indexOf(tab);
     let next;
@@ -2271,11 +2299,11 @@ html&gt;body{padding:0}&lt;/style&gt;
     selectTab(tabs[next]);
   };
 
-  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+  for (const list of document.querySelectorAll('.nav[role=&quot;tablist&quot;]')) {
     const selected =
-      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
-      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
-      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+      list.querySelector('[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]') ??
+      list.querySelector('[role=&quot;tab&quot;].active') ??
+      list.querySelector('[role=&quot;tab&quot;]');
     if (selected != null) {
       selectTab(selected);
     }
@@ -2312,7 +2340,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       const controls = document.createElement(&quot;div&quot;);
       controls.className = &quot;viz-carousel-controls&quot;;
-      // Portable copy of the settings dropdown&#x27;s legacy glyph; no 14px icon-package preset matches it.
+      // Portable copy of the settings dropdown's legacy glyph; no 14px icon-package preset matches it.
       // https://github.com/openai/openai/blob/master/codex/codex-apps/webview/src/icons/chevron.svg
       controls.innerHTML = `
       &lt;button type=&quot;button&quot; class=&quot;viz-carousel-previous cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
@@ -2705,4 +2733,5 @@ html&gt;body{padding:0}&lt;/style&gt;
 </script>
 </body>
 </html>
+
 
