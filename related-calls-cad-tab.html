@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Related Calls — CAD Tab Terminology Prototype</title>
+<style>
+:root{color-scheme:light dark;--surface:light-dark(#fff,#1b2739);--background:light-dark(#f6f8fb,#121b29);--text:light-dark(#19263c,#ebf0f8);--muted:light-dark(#5c6b80,#b6c2d5);--line:light-dark(#aeb7c3,#526076);--blue:light-dark(#315dc3,#94b5ff);--selected:light-dark(#dce9ff,#2c456a);--grid-head:light-dark(#e4e9ef,#29364a);font:13px/1.4 'Segoe UI',Arial,sans-serif;background:var(--surface);color:var(--text)}
+*{box-sizing:border-box}body{margin:0;padding:16px}[hidden]{display:none!important}button,input{font:inherit;color:inherit}button{padding:4px 12px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(var(--surface),var(--background));min-height:28px;cursor:pointer}button:hover:not(:disabled){background:var(--selected);border-color:var(--blue)}button:disabled{opacity:.48;cursor:default}button:focus-visible,input:focus-visible,.grid-scroll:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.cad-window{border:1px solid #92a8b9;padding:4px;background:var(--background)}.titlebar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 8px;border-bottom:1px solid #7d9ab0;background:light-dark(#e1edf7,#22334a)}.titlebar h1{font-size:12px;font-weight:600;line-height:1.3;margin:0}.titlebar span{font-size:10px;color:var(--muted);letter-spacing:.5px}.tabs{margin-top:6px}.tab-row{display:grid;grid-template-columns:repeat(9,minmax(0,1fr))}.tab-row>span{display:flex;align-items:center;justify-content:center;text-align:center;padding:2px 4px;min-height:24px;font-size:12px;line-height:1.2;background:linear-gradient(light-dark(#f3f3f3,#2c3542),light-dark(#cdcdcd,#1b222c));border-right:1px solid light-dark(#888,#333);border-bottom:1px solid light-dark(#888,#333);color:light-dark(#000,#e8edf5);overflow-wrap:anywhere}.tab-row>span:first-child{border-left:1px solid light-dark(#888,#333)}.tab-row:first-child>span{border-top:1px solid light-dark(#888,#333);font-weight:600}.tab-row>span.active{position:relative;background:var(--background);border-bottom-color:transparent;border-radius:4px 4px 0 0;margin-top:-2px;padding-top:4px;font-weight:600}
+.panels{display:grid;grid-template-columns:minmax(0,1fr) 5px minmax(0,1fr);gap:4px;padding:12px 4px 4px;min-height:460px}.splitter{background:light-dark(#d7dce3,#38475b);margin-top:10px;border-left:1px solid var(--line);border-right:1px solid var(--line)}fieldset{min-width:0;margin:0;padding:4px 7px 7px;border:1px solid var(--line);display:flex;flex-direction:column}legend{padding:0 5px;font-size:13px;font-weight:400}.toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-height:34px;padding:2px 0 6px}.toolbar label{white-space:nowrap}.toolbar input{width:76px;height:28px;border:1px solid var(--line);border-radius:2px;background:var(--surface);text-align:right;padding:3px 5px}.toolbar .miles{margin-right:9px}.grid-scroll{overflow:auto;flex:1;background:var(--surface);border:1px solid var(--line);min-height:300px}table{border-collapse:collapse;width:100%;font-size:12px;text-align:left}th,td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:5px 7px;vertical-align:middle}th{background:linear-gradient(var(--surface),var(--grid-head));font-weight:400;white-space:nowrap}th:last-child,td:last-child{border-right:0}tbody tr:nth-child(even){background:var(--background)}tbody tr.selected{background:var(--selected)}td:first-child{width:29px;text-align:center;padding:4px}td:nth-child(2){white-space:nowrap;width:62px}td input{margin:0;accent-color:var(--blue);width:14px;height:14px;vertical-align:middle}.empty{padding:16px 10px;color:var(--muted);font-size:12px}.error{margin:0 0 6px;font-size:12px;color:light-dark(#a42e0b,#ffb395)}.status{min-height:28px;margin:0;padding:5px 9px;color:var(--muted);font-size:12px}.number{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:850px){.panels{grid-template-columns:1fr;gap:12px;min-height:0}.splitter{display:none}.grid-scroll{min-height:230px}.tab-row{grid-template-columns:repeat(5,minmax(0,1fr))}.titlebar span{display:none}}
+@media(max-width:450px){body{padding:8px}.tab-row{grid-template-columns:repeat(3,minmax(0,1fr))}.toolbar{gap:6px}.toolbar input{width:70px}.toolbar .miles{margin-right:0}.grid-scroll{min-height:200px}th,td{padding:5px}}
+</style>
+</head>
+<body>
+<main class="cad-window" aria-label="Call Details Related Calls prototype">
+ <header class="titlebar"><h1>CFS #917 - Detail</h1><span>CAD TAB TERMINOLOGY · SAMPLE DATA</span></header>
+ <nav class="tabs" aria-label="Call Details tabs">
+  <div class="tab-row"><span>1.Narrative</span><span>2.Vehicles</span><span>3.People</span><span>4.NCIC</span><span>5.E911</span><span>6.Incidents</span><span>7.SRI</span><span>8.Logs</span><span>9.Alerts</span></div>
+  <div class="tab-row"><span class="active" aria-current="page">0.Related Calls</span><span>Dispositions</span><span>Personnel</span><span>Questionnaire</span><span>GIS</span><span>Linked Calls</span><span>Text</span><span>Alarm</span><span>Attachments</span></div>
+ </nav>
+ <div class="panels">
+  <fieldset><legend>Current Merges</legend>
+   <div class="toolbar"><button type="button" id="undo-merge" disabled>Undo Merge</button></div>
+   <div class="grid-scroll" role="region" aria-label="Current Merges call grid" tabindex="0">
+    <table aria-label="Current Merges"><thead><tr><th scope="col"><span aria-label="Selection">▸</span></th><th scope="col">CFS #</th><th scope="col">Type</th><th scope="col">Location</th></tr></thead><tbody id="current-rows"></tbody></table>
+    <p class="empty" id="current-empty" hidden>No current merges.</p>
+   </div>
+  </fieldset>
+  <div class="splitter" aria-hidden="true"></div>
+  <fieldset><legend>Possible Related Calls</legend>
+   <div class="toolbar"><label for="search-radius">Search Radius:</label><input type="number" id="search-radius" value="1.00" min="0" max="999.99" step="0.01" inputmode="decimal" aria-describedby="radius-error"><span class="miles">miles</span><button type="button" id="merge-call" disabled>Merge Call</button></div>
+   <p id="radius-error" class="error" role="alert" hidden>Enter 0 to 999.99 miles, with up to 2 decimal places.</p>
+   <div class="grid-scroll" role="region" aria-label="Possible Related Calls call grid" tabindex="0">
+    <table aria-label="Possible Related Calls"><thead><tr><th scope="col"><span aria-label="Selection">▸</span></th><th scope="col">CFS #</th><th scope="col">Distance</th><th scope="col">Type</th><th scope="col">Location</th></tr></thead><tbody id="possible-rows"></tbody></table>
+    <p class="empty" id="possible-empty" hidden>No possible related calls within this radius.</p>
+   </div>
+  </fieldset>
+ </div>
+ <p class="status" id="status" role="status" aria-live="polite">Select a call to merge or undo a merge.</p>
+</main>
+<script>
+(()=>{
+ const calls=[{id:915,type:'Disturbance',location:'212 Oakhurst Ln',feet:0},{id:914,type:'DV',location:'214 Oakhurst Ln',feet:250},{id:913,type:'Disturbance',location:'216 Oakhurst Ln',feet:300}];
+ const merged=new Set([915]);let selectedCurrent=null,selectedPossible=null,radius=1;
+ const q=s=>document.querySelector(s),within=c=>c.feet/5280<=radius;
+ function row(c,current){const tr=document.createElement('tr');tr.dataset.call=String(c.id);tr.dataset.list=current?'current':'possible';tr.classList.toggle('selected',c.id===(current?selectedCurrent:selectedPossible));const select=document.createElement('input');select.type='radio';select.name=current?'current-call':'possible-call';select.value=c.id;select.checked=c.id===(current?selectedCurrent:selectedPossible);select.setAttribute('aria-label',`Select Call ${c.id} in ${current?'Current Merges':'Possible Related Calls'}`);const cell=document.createElement('td');cell.append(select);tr.append(cell);const values=[String(c.id),...current?[]:[`${(c.feet/5280).toFixed(2)} mi`],c.type,c.location];for(const [i,t] of values.entries()){const td=document.createElement('td');td.textContent=t;if(!current&&i===1)td.className='number';tr.append(td);}tr.addEventListener('click',()=>{if(current)selectedCurrent=c.id;else selectedPossible=c.id;render();q(`input[name="${current?'current-call':'possible-call'}"][value="${c.id}"]`)?.focus();});return tr;}
+ function render(){const current=calls.filter(c=>merged.has(c.id)),possible=calls.filter(c=>!merged.has(c.id)&&within(c));if(!current.some(c=>c.id===selectedCurrent))selectedCurrent=null;if(!possible.some(c=>c.id===selectedPossible))selectedPossible=null;q('#current-rows').replaceChildren(...current.map(c=>row(c,true)));q('#possible-rows').replaceChildren(...possible.map(c=>row(c,false)));q('#current-empty').hidden=current.length>0;q('#possible-empty').hidden=possible.length>0;q('#undo-merge').disabled=selectedCurrent===null;q('#merge-call').disabled=selectedPossible===null||q('#search-radius').getAttribute('aria-invalid')==='true';}
+ q('#merge-call').addEventListener('click',()=>{if(selectedPossible===null)return;const id=selectedPossible;merged.add(id);selectedCurrent=id;selectedPossible=null;render();q('#status').textContent=`Sample: Call ${id} merged with Call 917.`;q('#undo-merge').focus();});
+ q('#undo-merge').addEventListener('click',()=>{if(selectedCurrent===null)return;const id=selectedCurrent;merged.delete(id);selectedCurrent=null;selectedPossible=within(calls.find(c=>c.id===id))?id:null;render();q('#status').textContent=`Sample: Merge of Call ${id} with Call 917 undone.`;(selectedPossible!==null?q('#merge-call'):q('#search-radius')).focus();});
+ q('#search-radius').addEventListener('input',e=>{const input=e.target,valid=input.value!==''&&input.validity.valid&&Number.isFinite(input.valueAsNumber);input.setAttribute('aria-invalid',String(!valid));q('#radius-error').hidden=valid;if(valid){radius=input.valueAsNumber;render();q('#status').textContent=`${calls.filter(c=>!merged.has(c.id)&&within(c)).length} possible related calls within ${radius} ${radius===1?'mile':'miles'} of Call 917.`;}else q('#merge-call').disabled=true;});
+ document.addEventListener('change',e=>{if(e.target.matches('input[type=radio]')){const id=Number(e.target.value);if(e.target.name==='current-call')selectedCurrent=id;else selectedPossible=id;render();q(`input[name="${e.target.name}"][value="${id}"]`)?.focus();}});
+ render();
+})();
+</script>
+</body>
+</html>
