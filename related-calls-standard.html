@@ -1809,8 +1809,14 @@ html&gt;body{padding:0}
  &lt;header class=&quot;cad-window-title&quot;&gt;&lt;h1&gt;&lt;i data-lucide=&quot;radio&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; CFS #917 - Detail&lt;/h1&gt;&lt;span&gt;STANDARD · SAMPLE DATA&lt;/span&gt;&lt;/header&gt;
  &lt;nav class=&quot;cad-tabs&quot; aria-label=&quot;Call Details tabs&quot;&gt;&lt;div class=&quot;cad-tab-row&quot;&gt;&lt;span&gt;1.Narrative&lt;/span&gt;&lt;span&gt;2.Vehicles&lt;/span&gt;&lt;span&gt;3.People&lt;/span&gt;&lt;span&gt;4.NCIC&lt;/span&gt;&lt;span&gt;5.E911&lt;/span&gt;&lt;span&gt;6.Incidents&lt;/span&gt;&lt;span&gt;7.SRI&lt;/span&gt;&lt;span&gt;8.Logs&lt;/span&gt;&lt;span&gt;9.Alerts&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cad-tab-row&quot;&gt;&lt;span class=&quot;cad-active-tab&quot; aria-current=&quot;page&quot;&gt;0.Associated Calls&lt;/span&gt;&lt;span&gt;Dispositions&lt;/span&gt;&lt;span&gt;Personnel&lt;/span&gt;&lt;span&gt;Questionnaire&lt;/span&gt;&lt;span&gt;GIS&lt;/span&gt;&lt;span&gt;Linked Calls&lt;/span&gt;&lt;span&gt;Text&lt;/span&gt;&lt;span&gt;Alarm&lt;/span&gt;&lt;span&gt;Attachments&lt;/span&gt;&lt;/div&gt;&lt;/nav&gt;
  &lt;div class=&quot;workspace&quot; aria-label=&quot;Associated Calls&quot;&gt;
-  &lt;aside class=&quot;relationship-sidebar&quot; aria-label=&quot;Related call pairs&quot;&gt;&lt;div class=&quot;relationship-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Relationship status&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;sc-suggested-tab&quot; data-relationship-tab=&quot;suggested&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;sc-suggested-panel&quot;&gt;Suggested&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;sc-resolved-tab&quot; data-relationship-tab=&quot;resolved&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;sc-resolved-panel&quot;&gt;Resolved&lt;/button&gt;&lt;/div&gt;&lt;section class=&quot;relationship-row suggested-row&quot; id=&quot;sc-suggested-panel&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;sc-suggested-tab&quot;&gt;&lt;div id=&quot;sc-suggested-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Suggested pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-suggestions&quot; class=&quot;row-empty&quot; hidden&gt;No suggested pairs.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;relationship-row resolved-row&quot; id=&quot;sc-resolved-panel&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;sc-resolved-tab&quot; hidden&gt;&lt;div id=&quot;sc-resolved-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Resolved pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-resolved&quot; class=&quot;row-empty&quot;&gt;No resolved pairs.&lt;/p&gt;&lt;/section&gt;&lt;/aside&gt;
-  &lt;section class=&quot;comparison&quot; id=&quot;sc-comparison&quot; aria-label=&quot;Selected call pair comparison&quot;&gt;
+  &lt;aside class=&quot;relationship-sidebar&quot; aria-label=&quot;Related call pairs&quot;&gt;&lt;div class=&quot;relationship-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Relationship status&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;sc-suggested-tab&quot; data-relationship-tab=&quot;suggested&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;sc-suggested-panel&quot;&gt;Suggested&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;sc-resolved-tab&quot; data-relationship-tab=&quot;resolved&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;sc-resolved-panel&quot;&gt;Resolved&lt;/button&gt;&lt;/div&gt;&lt;section class=&quot;relationship-row suggested-row&quot; id=&quot;sc-suggested-panel&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;sc-suggested-tab&quot;&gt;&lt;div class=&quot;radius-search&quot;&gt;
+ &lt;label for=&quot;sc-search-radius&quot;&gt;Search Radius&lt;/label&gt;
+ &lt;div class=&quot;radius-input-row&quot;&gt;&lt;input id=&quot;sc-search-radius&quot; type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; max=&quot;999.99&quot; step=&quot;0.01&quot; value=&quot;1.00&quot; aria-describedby=&quot;sc-radius-help sc-radius-error&quot;&gt;&lt;span&gt;miles&lt;/span&gt;&lt;/div&gt;
+ &lt;p id=&quot;sc-radius-help&quot;&gt;From Call 917’s location&lt;/p&gt;
+ &lt;p id=&quot;sc-radius-error&quot; role=&quot;alert&quot; hidden&gt;Enter 0 to 999.99 miles, with up to 2 decimal places.&lt;/p&gt;
+ &lt;p id=&quot;sc-radius-count&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div id=&quot;sc-suggested-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Suggested pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-suggestions&quot; class=&quot;row-empty&quot; hidden&gt;No suggested calls within this radius. Increase the search radius to look farther away.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;relationship-row resolved-row&quot; id=&quot;sc-resolved-panel&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;sc-resolved-tab&quot; hidden&gt;&lt;div id=&quot;sc-resolved-buttons&quot; class=&quot;pair-buttons&quot; role=&quot;group&quot; aria-label=&quot;Resolved pairs for Call 917&quot;&gt;&lt;/div&gt;&lt;p id=&quot;sc-no-resolved&quot; class=&quot;row-empty&quot;&gt;No resolved pairs.&lt;/p&gt;&lt;/section&gt;&lt;/aside&gt;
+  &lt;p id=&quot;sc-empty-comparison&quot; class=&quot;comparison&quot; hidden&gt;Select a suggested call to compare with Call 917.&lt;/p&gt;&lt;section class=&quot;comparison&quot; id=&quot;sc-comparison&quot; aria-label=&quot;Selected call pair comparison&quot;&gt;
    &lt;div class=&quot;comparison-title&quot;&gt;&lt;div&gt;&lt;div class=&quot;eyebrow&quot;&gt;SELECTED PAIR&lt;/div&gt;&lt;h2 id=&quot;sc-pair-title&quot;&gt;Comparing Call 917 with Call 914&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;
    &lt;div class=&quot;pair-summary&quot;&gt;&lt;span id=&quot;sc-distance&quot;&gt;Same location · 5 minutes later&lt;/span&gt;&lt;/div&gt;
    &lt;div class=&quot;feedback&quot; id=&quot;sc-feedback&quot; role=&quot;status&quot; aria-live=&quot;polite&quot; hidden&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
@@ -1922,6 +1928,17 @@ html&gt;body{padding:0}
  #related-calls-details .inline-call-summary h3,#related-calls-details .inline-call-summary&gt;span{white-space:normal;overflow-wrap:anywhere;}
  #related-calls-details .call-card{min-width:0;}
 &lt;/style&gt;
+&lt;style&gt;
+ #related-calls-details .radius-search{margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid var(--sc-line);}
+ #related-calls-details .radius-search label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;}
+ #related-calls-details .radius-input-row{display:flex;align-items:center;gap:8px;font-size:13px;}
+ #related-calls-details .radius-input-row input{font:inherit;width:100px;min-width:0;padding:8px 10px;border:1px solid var(--sc-line);border-radius:5px;background:var(--sc-bg);color:var(--sc-text);text-align:right;}
+ #related-calls-details .radius-input-row input:focus-visible{outline:2px solid var(--sc-blue);outline-offset:3px;}
+ #related-calls-details .radius-search p{font-size:12px;line-height:1.5;margin-top:7px;color:var(--sc-muted);}
+ #related-calls-details #sc-radius-error{color:light-dark(#a42e0b,#ffb395);}
+ #related-calls-details #sc-radius-count{color:var(--sc-text);margin-top:10px;}
+ #related-calls-details #sc-empty-comparison{color:var(--sc-muted);font-size:14px;}
+&lt;/style&gt;
 &lt;script&gt;
 (()=&gt;{
  const root=document.getElementById('related-calls-details'),q=s=&gt;root.querySelector(s),qa=s=&gt;root.querySelectorAll(s);
@@ -1930,7 +1947,7 @@ html&gt;body{padding:0}
   913:{type:'Disturbance',location:'216 Oakhurst Ln',time:'22:10',feet:300,distance:'300 ft from Call 917 · 4 minutes earlier',narrative:[['22:10','Caller hears shouting from the direction of the nearby parking lot.'],['22:11','Two men are seen arguing near a blue pickup.'],['22:14','Caller hears a crash but cannot see what happened.'],['22:17','Caller reports a man walking north on Oakhurst Ln.']]}
  };
  const candidateOrder=['914','913'];
- const state={selected:'914',tab:'suggested',expanded:false,mergeKeep:{},results:{914:'pending',913:'pending'},shareNarrative:{914:true,913:true}};
+ const state={radius:1,selected:'914',tab:'suggested',expanded:false,mergeKeep:{},results:{914:'pending',913:'pending'},shareNarrative:{914:true,913:true}};
  const currentNarrative=q('.call-card .narrative');q('#sc-current-narrative').append(...Array.from(currentNarrative.querySelectorAll('p')).slice(-3).reverse());currentNarrative.previousElementSibling.remove();currentNarrative.remove();
  const oldNarrative=q('#sc-candidate-narrative');oldNarrative.previousElementSibling.remove();oldNarrative.remove();
  q('.call-columns').insertBefore(q('.actions'),q('.call-card:last-child'));
@@ -1938,11 +1955,16 @@ html&gt;body{padding:0}
  restore(window.openai?.widgetState);
  const initialSuggested=candidateOrder.find(id=&gt;state.results[id]==='pending');if(initialSuggested)state.selected=initialSuggested;
  function persist(){window.openai?.setWidgetState({modelContent:{version:5,currentCall:917,selectedCandidate:Number(state.selected),relationships:{...state.results},shareNarrative:{...state.shareNarrative},mergeKeep:{...state.mergeKeep}},privateContent:{expanded:state.expanded}})?.catch(()=&gt;{});}
- function render(){const id=state.selected,d=data[id],r=state.results[id];
+ function inRadius(id){return data[id].feet&lt;=state.radius*5280;}
+ function render(){
+  const visible=candidateOrder.filter(id=&gt;state.tab==='suggested'?state.results[id]==='pending'&amp;&amp;inRadius(id):state.results[id]!=='pending');
+  if(!visible.includes(state.selected)&amp;&amp;visible.length)state.selected=visible[0];
+  q('#sc-comparison').hidden=visible.length===0;q('#sc-empty-comparison').hidden=visible.length&gt;0;
+  const id=state.selected,d=data[id],r=state.results[id];
   qa('[data-relationship-tab]').forEach(b=&gt;b.setAttribute('aria-selected',String(b.dataset.relationshipTab===state.tab)));q('#sc-suggested-panel').hidden=state.tab!=='suggested';q('#sc-resolved-panel').hidden=state.tab!=='resolved';
   q('#sc-suggested-buttons').replaceChildren();q('#sc-resolved-buttons').replaceChildren();
-  for(const candidate of candidateOrder){const result=state.results[candidate],pending=result==='pending',action=pending?'':{linked:'Linked',merged:'Merged',dismissed:'Dismissed'}[result];const b=document.createElement('button');b.type='button';b.className='pair-button cursor-interaction';b.dataset.candidate=candidate;b.setAttribute('aria-pressed',String(candidate===id));b.setAttribute('aria-controls','sc-comparison');b.setAttribute('aria-label',`Call ${candidate}, ${data[candidate].type}, ${data[candidate].feet} ft${pending?'':', '+action}`);const number=document.createElement('span'),label=document.createElement('span');number.textContent=`Call ${candidate}, ${data[candidate].type}, ${data[candidate].feet} ft`;label.textContent=action;label.className='button-action';b.append(number);if(!pending)b.append(label);q(pending?'#sc-suggested-buttons':'#sc-resolved-buttons').append(b);}
-  const pending=Object.values(state.results).filter(r=&gt;r==='pending').length;q('#sc-no-suggestions').hidden=pending&gt;0;q('#sc-no-resolved').hidden=pending&lt;2;
+  for(const candidate of candidateOrder){if(state.results[candidate]==='pending'&amp;&amp;!inRadius(candidate))continue;const result=state.results[candidate],pending=result==='pending',action=pending?'':{linked:'Linked',merged:'Merged',dismissed:'Dismissed'}[result];const b=document.createElement('button');b.type='button';b.className='pair-button cursor-interaction';b.dataset.candidate=candidate;b.setAttribute('aria-pressed',String(candidate===id));b.setAttribute('aria-controls','sc-comparison');b.setAttribute('aria-label',`Call ${candidate}, ${data[candidate].type}, ${data[candidate].feet} ft${pending?'':', '+action}`);const number=document.createElement('span'),label=document.createElement('span');number.textContent=`Call ${candidate}, ${data[candidate].type}, ${data[candidate].feet} ft`;label.textContent=action;label.className='button-action';b.append(number);if(!pending)b.append(label);q(pending?'#sc-suggested-buttons':'#sc-resolved-buttons').append(b);}
+  const pending=candidateOrder.filter(id=&gt;state.results[id]==='pending'&amp;&amp;inRadius(id)).length;q('#sc-no-suggestions').hidden=pending&gt;0;q('#sc-no-resolved').hidden=candidateOrder.some(id=&gt;state.results[id]!=='pending');q('#sc-radius-count').textContent=`${pending} suggested ${pending===1?'call':'calls'} within ${state.radius} ${state.radius===1?'mile':'miles'}`;
   q('#sc-pair-title').textContent=`Comparing Call 917 with Call ${id}`;q('#sc-distance').textContent=d.distance;
   q('#sc-candidate-title').textContent=`Call ${id}`;q('#sc-candidate-type').textContent=d.type;q('#sc-candidate-location').textContent=d.location;q('#sc-candidate-time').textContent=`${d.time} · Jul 14`;q('#sc-other-narrative').innerHTML=d.narrative.slice(-3).reverse().map(([t,n])=&gt;`&lt;p&gt;&lt;time&gt;${t}&lt;/time&gt;${n}&lt;/p&gt;`).join('');q('#sc-narrative-heading').textContent=`Call ${id} · Latest 3 narrative updates`;q('#sc-action-context').textContent=`Call 917 ↔ Call ${id}`;
   q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide narrative comparison':'Show narrative comparison';
@@ -1962,10 +1984,16 @@ html&gt;body{padding:0}
  root.addEventListener('click',e=&gt;{const b=e.target.closest('button');if(!b)return;if(b.dataset.relationshipTab){state.tab=b.dataset.relationshipTab;const first=candidateOrder.find(id=&gt;(state.results[id]==='pending')===(state.tab==='suggested'));if(first)state.selected=first;}if(b.dataset.candidate){state.selected=b.dataset.candidate;}
   const action=b.dataset.action;if(action==='merge'){draftMergeKeep=state.selected;renderMerge();q('#sc-merge-dialog').hidden=false;q('[data-action=cancel]').focus();return;}if(action==='flip-merge'){draftMergeKeep=draftMergeKeep==='917'?state.selected:'917';renderMerge();return;}if(action==='cancel'){close();return;}
   if(action==='link'){q('#sc-link-title').textContent=`Link Call 917 and Call ${state.selected}?`;q('#sc-no-share').checked=false;q('#sc-link-dialog').hidden=false;q('#sc-no-share').focus();return;}if(action==='cancel-link'){closeLink();return;}if(action==='confirm-link'){state.shareNarrative[state.selected]=!q('#sc-no-share').checked;closeLink();state.results[state.selected]='linked';}
-  if(action==='confirm-merge'){state.mergeKeep[state.selected]=draftMergeKeep;close();state.results[state.selected]='merged';}if(action==='dismiss'){state.results[state.selected]='dismissed';}if(['confirm-link','dismiss','confirm-merge'].includes(action))state.tab='resolved';if(action==='undo'){state.results[state.selected]='pending';state.shareNarrative[state.selected]=true;state.tab='suggested';}if(action==='narrative')state.expanded=!state.expanded;render();persist();if(['confirm-link','dismiss','confirm-merge'].includes(action))q('[data-action=undo]').focus();else if(b.dataset.candidate||action==='undo')q(`[data-candidate=&quot;${state.selected}&quot;]`).focus();
+  if(action==='confirm-merge'){state.mergeKeep[state.selected]=draftMergeKeep;close();state.results[state.selected]='merged';}if(action==='dismiss'){state.results[state.selected]='dismissed';}if(['confirm-link','dismiss','confirm-merge'].includes(action))state.tab='resolved';if(action==='undo'){state.results[state.selected]='pending';state.shareNarrative[state.selected]=true;state.tab='suggested';}if(action==='narrative')state.expanded=!state.expanded;render();persist();if(['confirm-link','dismiss','confirm-merge'].includes(action))q('[data-action=undo]').focus();else if(b.dataset.candidate||action==='undo')q(`[data-candidate=&quot;${state.selected}&quot;]`)?.focus();
  });
  root.addEventListener('keydown',e=&gt;{const linking=!q('#sc-link-dialog').hidden;if(!linking&amp;&amp;q('#sc-merge-dialog').hidden)return;if(e.key==='Escape'){e.preventDefault();linking?closeLink():close();}if(e.key==='Tab'){const dialog=q(linking?'#sc-link-dialog':'#sc-merge-dialog'),focusable=Array.from(dialog.querySelectorAll('button:not([disabled]),input:not([disabled])')),a=focusable[0],b=focusable[focusable.length-1];if(e.shiftKey&amp;&amp;document.activeElement===a){e.preventDefault();b.focus();}else if(!e.shiftKey&amp;&amp;document.activeElement===b){e.preventDefault();a.focus();}}});
  window.addEventListener('openai:set_globals',e=&gt;{if(e.detail?.globals?.widgetState){restore(e.detail.globals.widgetState);render();}});
+ const radiusInput=q('#sc-search-radius');
+ radiusInput.addEventListener('input',()=&gt;{
+  const value=radiusInput.valueAsNumber,valid=radiusInput.value!==''&amp;&amp;radiusInput.validity.valid&amp;&amp;Number.isFinite(value);
+  radiusInput.setAttribute('aria-invalid',String(!valid));q('#sc-radius-error').hidden=valid;
+  if(!valid)return;state.radius=value;render();
+ });
  render();
 })();
 &lt;/script&gt;
@@ -2841,6 +2869,7 @@ html&gt;body{padding:0}
 </script>
 </body>
 </html>
+
 
 
 
