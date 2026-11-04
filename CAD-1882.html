@@ -17,6 +17,49 @@ body{padding:0;background:var(--bg)}button:disabled{opacity:.45;cursor:default}b
 @container related (max-width:500px){.workspace{display:block}.sidebar{border-right:0;border-bottom:1px solid var(--line)}.comparison{overflow:visible}}
 .window-tools summary{display:flex;align-items:center;justify-content:center;width:27px;height:27px;padding:0;border:0;border-radius:3px;background:transparent;color:var(--muted);font-size:17px}.window-tools summary:hover{background:var(--blue-bg);color:var(--text)}.window-tools summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.menu-items hr{width:100%;border:0;border-top:1px solid var(--line);margin:3px 0}.menu-items .lock-label{padding:3px 9px}.pair-select{position:absolute;inset:0;width:100%;height:100%;min-height:0}.candidate .resolved-tag{pointer-events:none}
 #confirm[data-action="merge"]{width:min(560px,calc(100% - 24px));padding:20px}.merge-direction{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:14px;margin-top:13px}.merge-direction h3{color:var(--muted);font-size:12px;margin-bottom:10px}.merge-call-pair{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:center;gap:12px}.merge-call{display:flex;flex-wrap:wrap;gap:7px 10px;align-content:center;border:1px solid var(--line);border-radius:5px;padding:11px;min-height:91px;min-width:0}.merge-call strong{font-size:14px;width:100%}.merge-units{font-size:11px;color:var(--muted);overflow-wrap:anywhere;width:100%}.merge-disposition{font-size:11px;font-weight:600}.merge-call[data-disposition="keep"]{background:var(--green-bg);border-color:var(--green)}.merge-call[data-disposition="keep"] .merge-disposition{color:var(--green)}.merge-call[data-disposition="cancel"]{background:var(--orange-bg);border-color:var(--orange)}.merge-call[data-disposition="cancel"] .merge-disposition{color:var(--orange)}button.merge-arrow{width:34px;height:34px;border-radius:50%;padding:0;font-size:21px;background:var(--surface);color:var(--text)}#confirm[data-action="merge"] #confirm-text{font-size:13px;color:var(--muted);line-height:1.6;margin:13px 0 18px}@media(max-width:420px){#confirm[data-action="merge"]{padding:14px}.merge-direction{padding:9px}.merge-call-pair{gap:6px;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr)}button.merge-arrow{width:30px}.merge-call{padding:8px}}
+
+/* CAD 14.0 background roles, adapted for the prototype's HTML controls. */
+:root{
+ --bg:#fff;--surface:#fff;--text:#000;--muted:#6c6c6c;--line:#e3e6eb;
+ --chrome:#eef5fd;--chrome-line:#797979;
+ --cad-list:#eef5fd;--cad-form:#fff;--cad-grid:#fff;--cad-grid-alt:#eee;
+ --cad-grid-hover:#d3d3d3;--cad-grid-selected:#d3d3d3;--cad-grid-active:#a9a9a9;
+ --cad-grid-text:#000;--cad-grid-selected-text:#000;--cad-input:#fff;
+ --cad-button:#ddd;--cad-button-border:#999;--cad-toolbar-hover:#c2dbf8;
+}
+:root[data-theme=dark]{
+ --bg:#333;--surface:#333;--text:#fff;--muted:#aaa;--line:#797979;
+ --chrome:#333;--chrome-line:#797979;
+ --cad-list:#333;--cad-form:#333;--cad-grid:#999;--cad-grid-alt:#ccc;
+ --cad-grid-hover:#555;--cad-grid-selected:#404040;--cad-grid-active:#202020;
+ --cad-grid-text:#000;--cad-grid-selected-text:#fff;--cad-input:#1e1e1e;
+ --cad-button:#333;--cad-button-border:#999;--cad-toolbar-hover:#4d4d4d;
+}
+.desktop,.workspace,.comparison,.window,.call-card,.floating,.floating-content{background:var(--cad-form)}
+.sidebar,.pairs{background:var(--cad-list)}
+.app-header,.titlebar,.ribbon{background:var(--chrome)}
+.ribbon button{background:transparent}.ribbon button:hover{background:var(--cad-toolbar-hover)}
+.ribbon button[aria-expanded=true]{background:var(--cad-toolbar-hover)}
+.candidate{background:var(--cad-grid);color:var(--cad-grid-text)}
+.candidate:hover{background:var(--cad-grid-hover);color:var(--cad-grid-selected-text)}
+.candidate.selected{background:var(--cad-grid-selected);color:var(--cad-grid-selected-text);border-color:var(--chrome-line);box-shadow:inset 0 0 0 1px var(--chrome-line)}
+.candidate.selected:hover{background:var(--cad-grid-active)}
+.candidate .ai-label,.candidate .confidence,.candidate ul,.candidate-numbers a{color:inherit}
+.pair-select{color:inherit}
+.queue{background:var(--cad-grid);color:var(--cad-grid-text)}
+.queue tbody tr:nth-child(even){background:var(--cad-grid-alt)}
+.queue tbody tr:hover{background:var(--cad-grid-hover);color:var(--cad-grid-selected-text)}
+.queue a{color:inherit}.queue th{background:var(--cad-list);color:var(--text)}
+.queue th,.queue td{border-color:var(--line)}
+.background-title,.narrative-head,.sample-note,.dock-tabs{background:var(--cad-list)}
+.narrative-row{background:var(--cad-grid);color:var(--cad-grid-text)}
+.narrative-row:nth-child(odd){background:var(--cad-grid-alt)}
+.narrative-entry time{color:inherit}
+.call-status select{background:var(--cad-input)}
+.tabs button{background:transparent}.tabs button[aria-selected=true]{background:var(--cad-grid-selected);color:var(--text);box-shadow:inset 0 -2px var(--chrome-line)}
+.actions button:not(.recommended),.window-tools .menu-items button,dialog footer button:not(.primary){background:var(--cad-button);border-color:var(--cad-button-border)}
+.actions button:not(.recommended):hover,.window-tools .menu-items button:hover,dialog footer button:not(.primary):hover{background:var(--cad-grid-hover);color:var(--cad-grid-selected-text)}
+
 </style></head><body><header class="app-header"><h1>CAD-1882</h1><button id="theme-toggle" aria-label="Switch to dark theme">Dark theme</button></header>
 <nav class="ribbon" aria-label="Dispatch ribbon"><button data-ribbon="dispatch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 3l9 7v11H3zM9 21v-8h6v8"/></svg>Dispatch</button><span class="divider"></span><button id="open-related" aria-expanded="true" aria-controls="related-window"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="8" height="7" rx="1.5"/><rect x="14" y="13" width="8" height="7" rx="1.5"/><path d="M6 11v5h8M18 13V8h-8"/></svg>Related Calls</button><button id="open-ticker" aria-expanded="false" aria-controls="ticker"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M5 12h3l2-4 4 8 2-4h3"/></svg>Event Ticker</button></nav>
 <div class="desktop"><section class="dispatch-backdrop" aria-label="Dispatch workspace"><header class="background-title"><span>Dispatch · Active calls</span><span>Sample data</span></header><table class="queue"><thead><tr><th>Call</th><th>Type</th><th>Location</th><th>Status</th></tr></thead><tbody id="active-calls"></tbody></table></section>
