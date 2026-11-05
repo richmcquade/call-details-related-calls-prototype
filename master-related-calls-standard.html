@@ -1820,7 +1820,7 @@ html&gt;body{padding:0}
    &lt;/div&gt;
    
    &lt;div class=&quot;actions&quot;&gt;&lt;span id=&quot;sc-action-context&quot;&gt;Apply to Call 917 ↔ Call 919&lt;/span&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;dismiss&quot;&gt;Dismiss&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;merge&quot;&gt;Merge calls&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;link&quot;&gt;Link calls&lt;/button&gt;&lt;/div&gt;&lt;span id=&quot;sc-resolved-label&quot; hidden&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; data-action=&quot;undo&quot; hidden&gt;Undo&lt;/button&gt;&lt;/div&gt;
-   &lt;button type=&quot;button&quot; class=&quot;narrative-toggle cursor-interaction&quot; data-action=&quot;narrative&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;sc-narrative-panel&quot;&gt;Show narrative comparison&lt;/button&gt;
+   &lt;button type=&quot;button&quot; class=&quot;narrative-toggle cursor-interaction&quot; data-action=&quot;narrative&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;sc-narrative-panel&quot;&gt;Latest narrative updates&lt;/button&gt;
    &lt;section id=&quot;sc-narrative-panel&quot; class=&quot;narrative-panel&quot; aria-label=&quot;Narrative comparison&quot; hidden&gt;&lt;div&gt;&lt;h4 id=&quot;master-left-narrative-heading&quot;&gt;&lt;/h4&gt;&lt;div id=&quot;sc-current-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h4 id=&quot;sc-narrative-heading&quot;&gt;Call 919 narrative&lt;/h4&gt;&lt;div id=&quot;sc-other-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
    
   &lt;/section&gt;
@@ -1976,7 +1976,7 @@ html&gt;body{padding:0}
   for(const [suffix,value] of Object.entries({title:`Call ${p.right}`,type:right.type,location:right.location,time:right.time}))q('#sc-candidate-'+suffix).textContent=value;
   q('#master-left-narrative-heading').textContent=`Call ${p.left} · Latest 3 narrative updates`;q('#sc-narrative-heading').textContent=`Call ${p.right} · Latest 3 narrative updates`;q('#sc-current-narrative').innerHTML=narrative(p.left);q('#sc-other-narrative').innerHTML=narrative(p.right);
   q('#sc-action-context').textContent=`Call ${p.left} ↔ Call ${p.right}`;
-  q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide narrative comparison':'Show narrative comparison';
+  q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide latest narrative updates':'Latest narrative updates';
   q('.actions&gt;div').hidden=result!=='pending';q('#sc-resolved-label').hidden=result==='pending';q('[data-action=undo]').hidden=result==='pending';
   const o=outcome(p),label={linked:'Calls linked',merged:`Call ${o.cancel} merged into Call ${o.keep}`,dismissed:'Relationship dismissed'}[result]||'';
   q('#sc-resolved-label').textContent=label;q('#sc-feedback').hidden=result==='pending';q('#sc-feedback&gt;span').textContent=result==='linked'?`Call ${p.left} linked with Call ${p.right}. New narrative ${state.share[p.key]?'will':'will not'} be shared.`:label;
@@ -2878,6 +2878,7 @@ html&gt;body{padding:0}
 </script>
 </body>
 </html>
+
 
 
 
