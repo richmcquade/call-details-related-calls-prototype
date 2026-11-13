@@ -1820,8 +1820,8 @@ html&gt;body{padding:0}
    &lt;/div&gt;
    
    &lt;div class=&quot;actions&quot;&gt;&lt;span id=&quot;sc-action-context&quot;&gt;Apply to Call 917 ↔ Call 919&lt;/span&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;dismiss&quot;&gt;Dismiss&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;merge&quot;&gt;Merge calls&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;link&quot;&gt;Link calls&lt;/button&gt;&lt;/div&gt;&lt;span id=&quot;sc-resolved-label&quot; hidden&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; data-action=&quot;undo&quot; hidden&gt;Undo&lt;/button&gt;&lt;/div&gt;
-   &lt;button type=&quot;button&quot; class=&quot;narrative-toggle cursor-interaction&quot; data-action=&quot;narrative&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;sc-narrative-panel&quot;&gt;Latest narrative updates&lt;/button&gt;
-   &lt;section id=&quot;sc-narrative-panel&quot; class=&quot;narrative-panel&quot; aria-label=&quot;Narrative comparison&quot; hidden&gt;&lt;div&gt;&lt;h4 id=&quot;master-left-narrative-heading&quot;&gt;&lt;/h4&gt;&lt;div id=&quot;sc-current-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h4 id=&quot;sc-narrative-heading&quot;&gt;Call 919 narrative&lt;/h4&gt;&lt;div id=&quot;sc-other-narrative&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+   &lt;button type=&quot;button&quot; class=&quot;narrative-toggle cursor-interaction&quot; data-action=&quot;narrative&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;sc-narrative-panel&quot;&gt;Show Narrative&lt;/button&gt;
+   &lt;section id=&quot;sc-narrative-panel&quot; class=&quot;narrative-panel&quot; aria-label=&quot;Narrative comparison&quot; hidden&gt;&lt;div&gt;&lt;h4 id=&quot;master-left-narrative-heading&quot;&gt;&lt;/h4&gt;&lt;div id=&quot;sc-current-narrative&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-labelledby=&quot;master-left-narrative-heading&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;h4 id=&quot;sc-narrative-heading&quot;&gt;Call 919 narrative&lt;/h4&gt;&lt;div id=&quot;sc-other-narrative&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-labelledby=&quot;sc-narrative-heading&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
    
   &lt;/section&gt;
  &lt;/div&gt;
@@ -1863,6 +1863,9 @@ html&gt;body{padding:0}
  #single-call-columns .narrative-toggle{font-size:12px;margin-bottom:14px;}
  #single-call-columns .narrative-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;padding:16px;background:var(--sc-bg);border:1px solid var(--sc-line);border-radius:5px;margin-bottom:15px;}
  #single-call-columns .narrative-panel p{font-size:12px;margin:0 0 13px;}
+ #single-call-columns .narrative-panel&gt;div{min-width:0;}
+ #single-call-columns #sc-current-narrative,#single-call-columns #sc-other-narrative{max-height:240px;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;padding-right:10px;overflow-wrap:anywhere;}
+ #single-call-columns #sc-current-narrative:focus-visible,#single-call-columns #sc-other-narrative:focus-visible{outline:2px solid var(--sc-muted);outline-offset:3px;}
  #single-call-columns .narrative-panel h4{font-size:13px;}
  @media(max-width:750px){#single-call-columns .call-columns{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}#single-call-columns .actions{grid-column:1/-1;grid-row:2;}#single-call-columns .actions&gt;div{flex-direction:row;justify-content:center;flex-wrap:wrap;}#single-call-columns .call-card dl{grid-template-columns:1fr;}}
  @media(max-width:450px){#single-call-columns .comparison,#single-call-columns .relationship-row{padding-left:14px;padding-right:14px;}#single-call-columns .call-columns,#single-call-columns .narrative-panel{grid-template-columns:1fr;}#single-call-columns .actions{grid-row:3;}#single-call-columns .call-card dl{grid-template-columns:1fr 1fr;}}
@@ -1939,10 +1942,10 @@ html&gt;body{padding:0}
 (()=&gt;{
  const root=document.getElementById('single-call-columns'),q=s=&gt;root.querySelector(s),qa=s=&gt;root.querySelectorAll(s);
  const calls={
-  917:{type:'Disturbance',location:'212 Oakhurst Ln',time:'22:14 · Jul 14',units:'1B4, 1B3',narrative:[['22:14','Caller reports a loud argument between two men in the parking lot.'],['22:15','One man is wearing a gray hoodie beside a blue Ford pickup.'],['22:17','Man in the gray hoodie walked north on Oakhurst Ln.']]},
-  942:{type:'Assault',location:'212 Oakhurst Ln',time:'22:19 · Jul 14',units:'None listed',narrative:[['22:19','Caller reports being punched after a loud argument in the parking lot.'],['22:20','Describes a man in a gray hoodie beside a blue Ford pickup.'],['22:21','Suspect left on foot heading north. Caller requests an officer.']]},
-  864:{type:'Burglary',location:'630 Maple St',time:'08:12 · Jul 14',units:'2A1',narrative:[['08:12','Caller reports a rear door forced open at a residence.'],['08:14','Neighbor saw two suspects in dark clothing leaving the yard.'],['08:16','A laptop and jewelry are reported missing.']]},
-  881:{type:'Burglary',location:'724 Maple St',time:'08:38 · Jul 14',units:'2A4',narrative:[['08:38','Homeowner found the rear door forced open.'],['08:40','Witness describes two suspects in dark clothing near the property.'],['08:42','Electronics are missing. Caller is waiting outside.']]}
+  917:{type:'Disturbance',location:'212 Oakhurst Ln',time:'22:14 · Jul 14',units:'1B4, 1B3',narrative:[['22:14','Caller reports a loud argument between two men in the parking lot.'],['22:15','One man is wearing a gray hoodie beside a blue Ford pickup.'],['22:17','Man in the gray hoodie walked north on Oakhurst Ln.'],[&quot;22:18&quot;,&quot;Caller is waiting near the parking lot entrance.&quot;],[&quot;22:20&quot;,&quot;Unit 1B4 is en route to the reported location.&quot;],[&quot;22:23&quot;,&quot;Unit 1B3 arrives and checks the north side of the parking lot.&quot;],[&quot;22:25&quot;,&quot;Officer is speaking with the original caller.&quot;]]},
+  942:{type:'Assault',location:'212 Oakhurst Ln',time:'22:19 · Jul 14',units:'None listed',narrative:[['22:19','Caller reports being punched after a loud argument in the parking lot.'],['22:20','Describes a man in a gray hoodie beside a blue Ford pickup.'],['22:21','Suspect left on foot heading north. Caller requests an officer.'],[&quot;22:22&quot;,&quot;Caller is waiting outside the main entrance.&quot;],[&quot;22:24&quot;,&quot;Caller reports no weapons seen during the argument.&quot;],[&quot;22:26&quot;,&quot;Responding officer advised of the suspect description and direction of travel.&quot;],[&quot;22:28&quot;,&quot;Officer arrives to speak with the caller and document the incident.&quot;]]},
+  864:{type:'Burglary',location:'630 Maple St',time:'08:12 · Jul 14',units:'2A1',narrative:[['08:12','Caller reports a rear door forced open at a residence.'],['08:14','Neighbor saw two suspects in dark clothing leaving the yard.'],['08:16','A laptop and jewelry are reported missing.'],[&quot;08:18&quot;,&quot;Caller has not entered the residence and is waiting across the street.&quot;],[&quot;08:20&quot;,&quot;Unit 2A1 is en route to check the property.&quot;],[&quot;08:24&quot;,&quot;Officer arrives and checks the exterior for signs of entry.&quot;],[&quot;08:27&quot;,&quot;Officer requests the homeowner prepare a list of missing items.&quot;]]},
+  881:{type:'Burglary',location:'724 Maple St',time:'08:38 · Jul 14',units:'2A4',narrative:[['08:38','Homeowner found the rear door forced open.'],['08:40','Witness describes two suspects in dark clothing near the property.'],['08:42','Electronics are missing. Caller is waiting outside.'],[&quot;08:44&quot;,&quot;Caller reports the residence was secure when they left earlier this morning.&quot;],[&quot;08:46&quot;,&quot;Unit 2A4 is en route to meet the homeowner.&quot;],[&quot;08:49&quot;,&quot;Officer arrives and begins an exterior check.&quot;],[&quot;08:52&quot;,&quot;Neighbor is available to provide a description of the suspects.&quot;]]}
  };
  const pairs=[{key:'917-942',left:917,right:942,feet:0,distance:'0 ft apart · 5 minutes apart'},{key:'864-881',left:864,right:881,feet:4224,distance:'4,224 ft apart · 26 minutes apart'}];
  const state={selected:pairs[0].key,tab:'suggested',expanded:false,results:{},share:{},keep:{}};
@@ -1950,7 +1953,7 @@ html&gt;body{padding:0}
  q('.call-columns').insertBefore(q('.actions'),q('.call-card:last-child'));
  const pending=p=&gt;(state.results[p.key]||'pending')==='pending';
  const pair=()=&gt;pairs.find(p=&gt;p.key===state.selected);
- const narrative=c=&gt;calls[c].narrative.slice(-3).reverse().map(([t,n])=&gt;`&lt;p&gt;&lt;time&gt;${t}&lt;/time&gt;${n}&lt;/p&gt;`).join('');
+ const narrative=c=&gt;calls[c].narrative.slice().reverse().map(([t,n])=&gt;`&lt;p&gt;&lt;time&gt;${t}&lt;/time&gt;${n}&lt;/p&gt;`).join('');
  let draftKeep,returnFocus;
  function outcome(p){const keep=state.keep[p.key]||p.left;return {keep,cancel:keep===p.left?p.right:p.left};}
  function render(){
@@ -1974,9 +1977,9 @@ html&gt;body{padding:0}
   q('#sc-pair-title').textContent=`Comparing Call ${p.left} with Call ${p.right}`;q('#sc-distance').textContent=p.distance;
   for(const [suffix,value] of Object.entries({title:`Call ${p.left}`,type:left.type,location:left.location,time:left.time,units:left.units}))q('#master-left-'+suffix).textContent=value;
   for(const [suffix,value] of Object.entries({title:`Call ${p.right}`,type:right.type,location:right.location,time:right.time}))q('#sc-candidate-'+suffix).textContent=value;
-  q('#master-left-narrative-heading').textContent=`Call ${p.left} · Latest 3 narrative updates`;q('#sc-narrative-heading').textContent=`Call ${p.right} · Latest 3 narrative updates`;q('#sc-current-narrative').innerHTML=narrative(p.left);q('#sc-other-narrative').innerHTML=narrative(p.right);
+  q('#master-left-narrative-heading').textContent=`Call ${p.left} · Narrative`;q('#sc-narrative-heading').textContent=`Call ${p.right} · Narrative`;q('#sc-current-narrative').innerHTML=narrative(p.left);q('#sc-other-narrative').innerHTML=narrative(p.right);
   q('#sc-action-context').textContent=`Call ${p.left} ↔ Call ${p.right}`;
-  q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide latest narrative updates':'Latest narrative updates';
+  q('#sc-narrative-panel').hidden=!state.expanded;q('[data-action=narrative]').setAttribute('aria-expanded',String(state.expanded));q('[data-action=narrative]').textContent=state.expanded?'Hide Narrative':'Show Narrative';
   q('.actions&gt;div').hidden=result!=='pending';q('#sc-resolved-label').hidden=result==='pending';q('[data-action=undo]').hidden=result==='pending';
   const o=outcome(p),label={linked:'Calls linked',merged:`Call ${o.cancel} merged into Call ${o.keep}`,dismissed:'Relationship dismissed'}[result]||'';
   q('#sc-resolved-label').textContent=label;q('#sc-feedback').hidden=result==='pending';q('#sc-feedback&gt;span').textContent=result==='linked'?`Call ${p.left} linked with Call ${p.right}. New narrative ${state.share[p.key]?'will':'will not'} be shared.`:label;
@@ -2878,6 +2881,7 @@ html&gt;body{padding:0}
 </script>
 </body>
 </html>
+
 
 
 
