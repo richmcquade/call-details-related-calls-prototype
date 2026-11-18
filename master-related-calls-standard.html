@@ -1500,7 +1500,7 @@ html&gt;body{padding:0}
  #single-call-columns #sc-merge-dialog section{width:min(560px,100%);padding:20px;}
  #single-call-columns #sc-merge-dialog .merge-direction{display:block;background:var(--sc-bg);border:1px solid var(--sc-line);border-radius:6px;padding:14px;margin-top:13px;}
  #single-call-columns .merge-direction h4{color:var(--sc-muted);font-size:12px;margin-bottom:10px;}
- #single-call-columns .merge-call-pair{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:center;gap:12px;}
+ #single-call-columns .merge-call-pair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;}
  #single-call-columns .merge-call{display:flex;flex-wrap:wrap;gap:7px 10px;align-content:center;border:1px solid var(--sc-line);border-radius:5px;padding:11px;min-height:91px;min-width:0;}
  #single-call-columns .merge-call strong{font-size:14px;width:100%;}
  #single-call-columns .merge-units{font-size:11px;color:var(--sc-muted);overflow-wrap:anywhere;width:100%;}
@@ -1509,11 +1509,11 @@ html&gt;body{padding:0}
  #single-call-columns .merge-call[data-disposition=keep] .merge-disposition{color:var(--sc-green);}
  #single-call-columns .merge-call[data-disposition=cancel]{background:light-dark(#fff6e6,#443620);border-color:light-dark(#d69a25,#d7aa55);}
  #single-call-columns .merge-call[data-disposition=cancel] .merge-disposition{color:light-dark(#995b00,#ffd18b);}
- #single-call-columns button.merge-arrow{width:34px;height:34px;border-radius:50%;padding:0;font-size:21px;background:var(--sc-surface);color:var(--sc-text);}
+ #single-call-columns button.merge-swap{min-width:60px;min-height:34px;border-radius:5px;padding:8px 11px;font-size:13px;font-weight:600;white-space:nowrap;}
  #single-call-columns #sc-merge-description{font-size:13px;color:var(--sc-muted);line-height:1.6;margin:13px 0 18px;}
  #single-call-columns #sc-merge-dialog .merge-footer{display:flex;justify-content:flex-end;gap:8px;}
  #single-call-columns #sc-merge-dialog{padding:12px;}
- @media(max-width:420px){#single-call-columns #sc-merge-dialog section{padding:14px;}#single-call-columns #sc-merge-dialog .merge-direction{padding:9px;}#single-call-columns .merge-call-pair{gap:6px;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);}#single-call-columns button.merge-arrow{width:30px;height:34px;}#single-call-columns .merge-call{padding:8px;}}
+ @media(max-width:420px){#single-call-columns #sc-merge-dialog section{padding:14px;}#single-call-columns #sc-merge-dialog .merge-direction{padding:9px;}#single-call-columns .merge-call-pair{gap:6px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);}#single-call-columns button.merge-swap{min-width:54px;padding:8px;}#single-call-columns .merge-call{padding:8px;}}
 
 &lt;/style&gt;
 &lt;/head&gt;
@@ -1825,8 +1825,7 @@ html&gt;body{padding:0}
    
   &lt;/section&gt;
  &lt;/div&gt;
- &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-merge-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-merge-title&quot; aria-describedby=&quot;sc-merge-description&quot;&gt;&lt;h3 id=&quot;sc-merge-title&quot;&gt;Confirm merge&lt;/h3&gt;&lt;div class=&quot;merge-direction&quot;&gt;&lt;h4&gt;Merge direction&lt;/h4&gt;&lt;div class=&quot;merge-call-pair&quot;&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-left&quot;&gt;&lt;strong&gt;Call 917&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;2 units · 1B4, 1B3&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;merge-arrow cursor-interaction&quot; data-action=&quot;flip-merge&quot; aria-label=&quot;Reverse merge direction&quot; data-tooltip=&quot;Reverse merge direction&quot;&gt;→&lt;/button&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-right&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;No units listed&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;sc-merge-description&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;div class=&quot;merge-footer&quot;&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-merge&quot;&gt;Merge&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
- &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-link-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-link-title&quot; aria-describedby=&quot;sc-link-description&quot;&gt;&lt;h3 id=&quot;sc-link-title&quot;&gt;Link Call 917 and Call 919?&lt;/h3&gt;&lt;p id=&quot;sc-link-description&quot;&gt;New narrative added to either call will be shared with the other call.&lt;/p&gt;&lt;label class=&quot;no-share-option cursor-interaction&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sc-no-share&quot; aria-describedby=&quot;sc-no-share-description&quot;&gt;&lt;span&gt;&lt;strong&gt;Do not share new narrative&lt;/strong&gt;&lt;span id=&quot;sc-no-share-description&quot;&gt;The calls will be linked, but new narrative will remain with the call where it was entered.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;&lt;div&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel-link&quot;&gt;No, Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-link&quot;&gt;Yes, Link Calls&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+ &lt;div class=&quot;dialog-cover&quot; id=&quot;sc-merge-dialog&quot; hidden&gt;&lt;section role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;sc-merge-title&quot; aria-describedby=&quot;sc-merge-description&quot;&gt;&lt;h3 id=&quot;sc-merge-title&quot;&gt;Confirm merge&lt;/h3&gt;&lt;div class=&quot;merge-direction&quot;&gt;&lt;h4&gt;Merge direction&lt;/h4&gt;&lt;div class=&quot;merge-call-pair&quot;&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-left&quot;&gt;&lt;strong&gt;Call 917&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;2 units · 1B4, 1B3&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;merge-swap cursor-interaction&quot; data-action=&quot;flip-merge&quot; aria-label=&quot;Swap merge direction&quot; data-tooltip=&quot;Swap merge direction&quot;&gt;Swap&lt;/button&gt;&lt;div class=&quot;merge-call&quot; id=&quot;sc-merge-right&quot;&gt;&lt;strong&gt;&lt;/strong&gt;&lt;span class=&quot;merge-units&quot;&gt;No units listed&lt;/span&gt;&lt;span class=&quot;merge-disposition&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p id=&quot;sc-merge-description&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;div class=&quot;merge-footer&quot;&gt;&lt;button type=&quot;button&quot; data-action=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;primary&quot; data-action=&quot;confirm-merge&quot;&gt;Merge&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;style&gt;
  #single-call-columns{--sc-bg:light-dark(#f6f8fb,#121b29);--sc-surface:light-dark(#fff,#1b2739);--sc-text:light-dark(#19263c,#ebf0f8);--sc-muted:light-dark(#5c6b80,#b6c2d5);--sc-line:light-dark(#dce2ed,#3c4a60);--sc-blue:light-dark(#315dc3,#94b5ff);--sc-blue-bg:light-dark(#edf3ff,#263a59);--sc-green:light-dark(#06775c,#8ce0c1);--sc-green-bg:light-dark(#e4f4ec,#203e37);--sc-mark:light-dark(#ece2ff,#4d3b68);background:var(--sc-bg);color:var(--sc-text);font:14px/1.5 'Segoe UI',Arial,sans-serif;border:1px solid var(--sc-line);border-radius:8px;overflow:hidden;position:relative;}
@@ -1873,11 +1872,7 @@ html&gt;body{padding:0}
  #single-call-columns .inline-call-summary h3,#single-call-columns .inline-call-summary&gt;span{font-size:16px;white-space:nowrap;}
  #single-call-columns .call-card{align-self:center;padding:12px 14px;}
  #single-call-columns .why-related h4,#single-call-columns .why-related ul{font-size:14px;}
- #single-call-columns .no-share-option{display:flex;gap:10px;align-items:flex-start;margin:19px 0 23px;font-size:13px;}
- #single-call-columns .no-share-option input{width:17px;height:17px;flex-shrink:0;margin:3px 0 0;accent-color:var(--sc-blue);}
- #single-call-columns .no-share-option strong{display:block;font-weight:600;margin-bottom:4px;}
  #single-call-columns #sc-no-share-description{display:block;color:var(--sc-muted);}
- #single-call-columns #sc-link-dialog section{width:min(470px,100%);}
  #single-call-columns{border-radius:0;border:1px solid light-dark(#79a5cc,#526781);padding:4px;background:var(--sc-surface);}
  #single-call-columns .cad-window-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 8px;margin-bottom:7px;background:light-dark(#e1edf8,#26374b);border-bottom:1px solid light-dark(#7fa4c7,#526781);}
  #single-call-columns .cad-window-title h1{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;margin:0;color:var(--sc-text);}
@@ -1985,25 +1980,24 @@ html&gt;body{padding:0}
   q('#sc-resolved-label').textContent=label;q('#sc-feedback').hidden=result==='pending';q('#sc-feedback&gt;span').textContent=result==='linked'?`Call ${p.left} linked with Call ${p.right}. New narrative ${state.share[p.key]?'will':'will not'} be shared.`:label;
  }
  function renderMerge(){const p=pair();for(const [selector,id] of [['#sc-merge-left',p.left],['#sc-merge-right',p.right]]){const card=q(selector),keep=id===draftKeep;card.querySelector('strong').textContent=`Call ${id}`;card.querySelector('.merge-units').textContent=`Units: ${calls[id].units}`;card.dataset.disposition=keep?'keep':'cancel';card.querySelector('.merge-disposition').textContent=keep?'KEEP':'CANCEL';}
-  const cancel=draftKeep===p.left?p.right:p.left;q('[data-action=flip-merge]').textContent=draftKeep===p.left?'←':'→';q('[data-action=flip-merge]').setAttribute('aria-label',`Reverse direction: keep Call ${cancel}, cancel Call ${draftKeep}`);q('#sc-merge-description').textContent=`Call ${cancel} will be canceled and merged with Call ${draftKeep}. Call ${draftKeep} will be kept. Do you wish to continue?`;
+  const cancel=draftKeep===p.left?p.right:p.left;q('[data-action=flip-merge]').textContent='Swap';q('[data-action=flip-merge]').setAttribute('aria-label',`Swap merge direction: keep Call ${cancel}, cancel Call ${draftKeep}`);q('#sc-merge-description').textContent=`Call ${cancel} will be canceled and merged with Call ${draftKeep}. Call ${draftKeep} will be kept. Do you wish to continue?`;
  }
- function close(){q('#sc-link-dialog').hidden=true;q('#sc-merge-dialog').hidden=true;returnFocus?.focus();}
+ function close(){q('#sc-merge-dialog').hidden=true;returnFocus?.focus();}
  root.addEventListener('click',e=&gt;{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.relationshipTab){state.tab=b.dataset.relationshipTab;render();return;}
   if(b.dataset.pair){state.selected=b.dataset.pair;render();q(`[data-pair=&quot;${state.selected}&quot;]`)?.focus();return;}
   const a=b.dataset.action,p=pair();
   if(a==='narrative'){state.expanded=!state.expanded;render();return;}
-  if(a==='link'){returnFocus=b;q('#sc-link-title').textContent=`Link Call ${p.left} and Call ${p.right}?`;q('#sc-no-share').checked=false;q('#sc-link-dialog').hidden=false;q('#sc-no-share').focus();return;}
+  if(a==='link'){state.share[p.key]=true;state.results[p.key]='linked';}
   if(a==='merge'){returnFocus=b;draftKeep=p.right;renderMerge();q('#sc-merge-dialog').hidden=false;q('[data-action=cancel]').focus();return;}
   if(a==='flip-merge'){draftKeep=draftKeep===p.left?p.right:p.left;renderMerge();return;}
-  if(a==='cancel'||a==='cancel-link'){close();return;}
-  if(a==='confirm-link'){state.share[p.key]=!q('#sc-no-share').checked;state.results[p.key]='linked';close();}
+  if(a==='cancel'){close();return;}
   if(a==='confirm-merge'){state.keep[p.key]=draftKeep;state.results[p.key]='merged';close();}
   if(a==='dismiss')state.results[p.key]='dismissed';
-  if(['confirm-link','confirm-merge','dismiss'].includes(a)){state.tab='resolved';render();q('[data-action=undo]').focus();}
+  if(['link','confirm-merge','dismiss'].includes(a)){state.tab='resolved';render();q('[data-action=undo]').focus();}
   if(a==='undo'){delete state.results[p.key];delete state.keep[p.key];delete state.share[p.key];state.tab='suggested';render();q(`[data-pair=&quot;${state.selected}&quot;]`)?.focus();}
  });
- root.addEventListener('keydown',e=&gt;{const dialog=!q('#sc-link-dialog').hidden?q('#sc-link-dialog'):!q('#sc-merge-dialog').hidden?q('#sc-merge-dialog'):null;if(!dialog)return;if(e.key==='Escape'){e.preventDefault();close();}if(e.key==='Tab'){const f=[...dialog.querySelectorAll('button,input')],first=f[0],last=f[f.length-1];if(e.shiftKey&amp;&amp;document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&amp;&amp;document.activeElement===last){e.preventDefault();first.focus();}}});
+ root.addEventListener('keydown',e=&gt;{const dialog=!q('#sc-merge-dialog').hidden?q('#sc-merge-dialog'):null;if(!dialog)return;if(e.key==='Escape'){e.preventDefault();close();}if(e.key==='Tab'){const f=[...dialog.querySelectorAll('button,input')],first=f[0],last=f[f.length-1];if(e.shiftKey&amp;&amp;document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&amp;&amp;document.activeElement===last){e.preventDefault();first.focus();}}});
  render();
 })();
 
